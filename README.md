@@ -44,8 +44,10 @@ winget import -i .\winget\winget-core.json --accept-package-agreements
 
 <details>
 <summary>Reference: <i>Bulk export/import with WinGet</i></summary>
+
 * Application list export: `winget export -o .\winget-export.json`
 * Bulk import: `winget import -i .\winget-export.json --accept-package-agreements`
+
 </details>
 
 ## FiraCode font
