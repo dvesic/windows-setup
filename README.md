@@ -10,10 +10,11 @@ I believe that general principles (MS Store, WinGet + Cloud storage) can be appl
 
 ## Essential
 
-* Windows 11, fully patched (Windows 10 will do, but I do not see point of using EOL operating system)
-* Adding OpenSSL capability (Elevated PowerShell): `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
+* [Windows 11](https://www.microsoft.com/software-download/windows11), fully patched (Windows 10 will do, but I do not see point of using EOL operating system)
+* Adding OpenSSL client capability (Elevated PowerShell): `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
 * YU Keyboard from [vesic.org](https://www.vesic.org/programi/nasa-slova-na-us-tastaturi-resenje-2005-e/)
-  * This is "local" solution for accent characters for Balkan nations (Serbian, Bosnian, Croatian...)
+  * This is "local" solution for typing accent characters (ćčšđžĆČŠĐŽ) for Balkan nations (Serbian, Bosnian, Croatian...)
+* Cloud storage; any will do, but I prefer those which are mirrored on file system (Google Drive, OneDrive) - easier to work with
 
 ## MS Store
 
@@ -21,28 +22,8 @@ Why MS Store? One time install, tied to MS Account, easy to install on other mac
 
 * [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701)
   * Settings file location: `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`
-  * mklink settings.json "G:\My Drive\Projects\Win.Terminal\settings.json"
-
+  * Re-mapping settings file to point out to cloud location: `mklink settings.json "G:\My Drive\Projects\Win.Terminal\settings.json"`
 * [App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)
-
-### Core Applications
-
-```bat
-winget import -i .\winget\winget-core.json --accept-package-agreements
-```
-
-### Application list export
-
-```bat
-winget export -o .\winget-export.json
-```
-
-### Application install in a batch
-
-```bat
-winget import -i .\winget-export.json --accept-package-agreements
-```
-
 * [Visual Studio Code](https://apps.microsoft.com/store/detail/XP9KHM4BK9FZ7Q)
   * Connect to github or MS Account for settings synhronisation
 * [PowerToys](https://apps.microsoft.com/store/detail/XP89DCGQ3K6VLD)
@@ -53,40 +34,55 @@ winget import -i .\winget-export.json --accept-package-agreements
 * [Sysinternals Suite](https://www.microsoft.com/store/productId/9P7KNL5RWT25)
 * [Mp3Tag](https://www.microsoft.com/store/productId/9NN77TCQ1NC8)
 
-### List of applications
+Once WinGet is installed, you are ready to install Core applications:
 
-Essential:
+## Core Applications
 
-* 7zip.7zip
-* Ghisler.TotalCommander
+```bat
+winget import -i .\winget\winget-core.json --accept-package-agreements
+```
+
+<details>
+<summary>Reference: <i>Bulk export/import with WinGet</i></summary>
+* Application list export: `winget export -o .\winget-export.json`
+* Bulk import: `winget import -i .\winget-export.json --accept-package-agreements`
+</details>
+
+### List of core applications
+
+#### Essential
+
+* [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
+* [Ghisler.TotalCommander](https://www.ghisler.com/)
   * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
   * `TOTALCMD64.EXE /i="C:\Users\dvesic\OneDrive - IGT PLC\Utils\totalcmd\wincmd.ini" /F="C:\Users\dvesic\OneDrive - IGT PLC\Utils\totalcmd\wcx_ftp.ini"`
   * `O:\PortableApps\PortableApps\WinMergePortable\WinMergePortable.exe /r %C1 %C2`
-* CodecGuide.K-LiteCodecPack.Standard
+* [CodecGuide.K-LiteCodecPack.Standard](https://codecguide.com/download_k-lite_codec_pack_standard.htm) - set of codec files and player for any video
+format
 
-Browsers:
+#### Browsers
 
 * Google.Chrome
   * Google Keep as separate application: `"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --profile-directory=Default --no-proxy-server --app=https://keep.google.com`
-* Opera.Opera
+* [Opera.Opera](https://www.opera.com/)
   * Launching Opera w/o proxy: `C:\Users\dvesic\AppData\Local\Programs\Opera\launcher.exe --no-proxy-server="`
 
-Communication:
+#### Communication
 
-* OpenWhisperSystems.Signal
-* Viber.Viber
+* [OpenWhisperSystems.Signal](https://signal.org/) Secure, open source instant messenger
+* [Viber.Viber](https://www.viber.com/en/)
 
-Tools:
+#### Tools
 
-* Skillbrains.Lightshot
+* [Skillbrains.Lightshot](https://app.prntscr.com/en/index.html) - Fast and efficient screenshot application
 * Microsoft.PowerShell
 * Microsoft.Office
-* WinSCP.WinSCP
-  * `winscp.exe /ini="G:\My Drive\Utils\WinSCP\WinSCP.ini"`
+* [WinSCP.WinSCP](https://winscp.net/eng/index.php)
+  * Use `/ini` to point out to cloud settings file: `winscp.exe /ini="G:\My Drive\Utils\WinSCP\WinSCP.ini"`
 
-Development / Python:
+#### Development / Python
 
-* Git.Git
+* [Git.Git](https://git-scm.com/)
   * `git config --global user.name "dvesic"`
   * `git config --global user.email "Dejan@Vesic.Org"`
   * Apart from using git, you can use OpenSSL within installation for key generation:
@@ -95,21 +91,16 @@ Development / Python:
 * GitHub.cli
 * GnuWin32.Wget
 * WinMerge.WinMerge
-* Anaconda.Miniconda3
-* JetBrains.PyCharm.Professional
+* [Anaconda.Miniconda3](https://docs.conda.io/en/latest/miniconda.html)
+* [JetBrains.PyCharm.Professional](https://www.jetbrains.com/pycharm/)
 
 ### Optional CORE applications
 
-```bat
-winget install -e --id GnuWin32.Grep
-```
+* [Grep](https://man7.org/linux/man-pages/man1/grep.1.html), windows binary: `winget install -e --id GnuWin32.Grep`
 
 ## Breevy
 
-Excellent [Text replacement](http://www.16software.com/breevy/) tool.
-
-License Name: Dejan Vesic   
-License Key(s): *Lookup into BitWarden*
+Excellent [Text replacement](http://www.16software.com/breevy/) tool. Recommend portable version with settings stored on Cloud.
 
 ## Home Applications
 
@@ -117,28 +108,28 @@ License Key(s): *Lookup into BitWarden*
 winget import -i .\winget\winget-home.json --accept-package-agreements
 ```
 
-### List of applications:
+### List of applications
 
-Cloud:
+#### Cloud
 
 * Dropbox.Dropbox
 * Google.Drive
 
-PDF Tools:
+#### PDF Tools
 
-* PDFsam.PDFsam
-* AngusJohnson.PDFTKBuilder
-* TrackerSoftware.PDF-XChangeEditor
+* [PDFsam.PDFsam](https://pdfsam.org/) - *PDFsam Basic*: split, merge, extract pages, rotate and mix PDF files
+* [AngusJohnson.PDFTKBuilder](http://angusj.com/pdftkb/) - free graphical interface to [PDFTK](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
+* [TrackerSoftware.PDF-XChangeEditor](https://www.tracker-software.com/product/pdf-xchange-editor) 
 
-Misc:
+#### Misc
 
-* Amazon.SendToKindle
-* MediaArea.MediaInfo.GUI
-* calibre.calibre
+* [Amazon.SendToKindle](https://www.amazon.com/sendtokindle/pc)
+* [calibre.calibre](https://calibre-ebook.com/)
+* [MediaArea.MediaInfo.GUI](https://mediaarea.net/en/MediaInfo)
 
-Gaming:
+#### Gaming
 
-* Valve.Steam
+* [Valve.Steam](https://store.steampowered.com/about/)
 
 ## Optional HOME applications
 
