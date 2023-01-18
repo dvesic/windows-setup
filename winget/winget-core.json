@@ -34,10 +34,16 @@
 					"PackageIdentifier" : "Microsoft.Office"
 				},
 				{
+					"PackageIdentifier" : "CodecGuide.K-LiteCodecPack.Standard"
+				},
+				{
 					"PackageIdentifier" : "Anaconda.Miniconda3"
 				},
 				{
 					"PackageIdentifier" : "JetBrains.PyCharm.Professional"
+				},
+				{
+					"PackageIdentifier" : "WinSCP.WinSCP"
 				},
 				{
 					"PackageIdentifier" : "WinMerge.WinMerge"
