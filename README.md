@@ -48,6 +48,12 @@ winget import -i .\winget\winget-core.json --accept-package-agreements
 * Bulk import: `winget import -i .\winget-export.json --accept-package-agreements`
 </details>
 
+## FiraCode font
+
+My work relies on CMD/Windows terminal prompt; one great resource for that is [FiraCode](https://github.com/tonsky/FiraCode) font, monospaced font for development.
+
+Install it last, after all other software and then [enable ligatures](https://github.com/tonsky/FiraCode/wiki#enabling-ligatures) for Windows Terminal, VS Code and PyCharm.
+
 ### List of core applications
 
 #### Essential
