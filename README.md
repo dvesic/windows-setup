@@ -102,6 +102,8 @@ format
 * [Anaconda.Miniconda3](https://docs.conda.io/en/latest/miniconda.html)
 * [JetBrains.PyCharm.Professional](https://www.jetbrains.com/pycharm/)
 
+Finally, if you are into python development, I do wholeheartly suggest to look into this repository - [Perfect python 4 Windows](https://github.com/dvesic/perfect-python-4-windows) as well as [Python Skeleton](https://github.com/dvesic/python-skeleton) - both based on significant experience.
+
 ### Optional CORE applications
 
 * [Grep](https://man7.org/linux/man-pages/man1/grep.1.html), windows binary: `winget install -e --id GnuWin32.Grep`
