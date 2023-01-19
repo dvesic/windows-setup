@@ -6,12 +6,22 @@ This is not usual "setup" guide; this is more quick and efficient guide (and mos
 
 Also, this targets minimum applications (core) + specific ones for home usage (home). Given that this is higly dependent on what you actually use PC for, it is not universal list :smile:
 
-I believe that general principles (MS Store, WinGet + Cloud storage) can be applied to everyone.
+I believe that general principles (MS Store, WinGet + Cloud storage) can be applied to everyone:
+
+* Any created artifact (= files) and configuration store on cloud storage
+* Make installation breeze, using automation (MS Store / WinGet) and minimalist approach what is actually needed
+* Use existing mechanisms (VS Code Settings Sync, PyCharm Settings Sync, cloud for file based settings) to sync various details between workplaces
+
+Having that, I split installation into three phases:
+
+1. **Essential** - for OS and core (Cloud services)
+2. **Core Applications** - mandatory ones, no matter type of machine (Home/Work) is in question
+3. **Rest** - either for fun/hobbies or just addition to previous list
 
 ## Essential
 
 * [Windows 11](https://www.microsoft.com/software-download/windows11), fully patched (Windows 10 will do, but I do not see point of using EOL operating system)
-* Adding OpenSSL client capability (Elevated PowerShell): `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
+  * Adding OpenSSL client capability (Elevated PowerShell): `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
 * YU Keyboard from [vesic.org](https://www.vesic.org/programi/nasa-slova-na-us-tastaturi-resenje-2005-e/)
   * This is "local" solution for typing accent characters (ćčšđžĆČŠĐŽ) for Balkan nations (Serbian, Bosnian, Croatian...)
 * Cloud storage; any will do, but I prefer those which are mirrored on file system (Google Drive, OneDrive) - easier to work with
