@@ -31,13 +31,13 @@ Having that, I split installation into three phases:
 Why MS Store? One time install, tied to MS Account, easy to install on other machine, auto-update...
 
 * [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701)
-  * ```powershell
+  * Powershell script for removing "original" and re-mapping to cloud folder with settings:
+  
+```powershell
 Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
-New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "c:\Users\dvesic\OneDrive - IGT PLC\Utils\Win.Terminal"
+New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "G:\My Drive\Projects\Win.Terminal"
   ```
   
-  Settings file location: `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`
-  * Re-mapping settings file to point out to cloud location: `mklink settings.json "G:\My Drive\Projects\Win.Terminal\settings.json"`
 * [App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)
 * [Visual Studio Code](https://apps.microsoft.com/store/detail/XP9KHM4BK9FZ7Q)
   * Connect to github or MS Account for settings synhronisation
