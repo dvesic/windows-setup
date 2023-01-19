@@ -31,7 +31,7 @@ Having that, I split installation into three phases:
 Why MS Store? One time install, tied to MS Account, easy to install on other machine, auto-update...
 
 * [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701)
-  * Powershell script for removing "original" and re-mapping to cloud folder with settings:
+  * Powershell script [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings:
   
 ```powershell
 Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
