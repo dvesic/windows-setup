@@ -137,9 +137,10 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 * [calibre.calibre](https://calibre-ebook.com/)
 * [MediaArea.MediaInfo.GUI](https://mediaarea.net/en/MediaInfo)
 
-#### Gaming
+#### Gaming / fun
 
 * [Valve.Steam](https://store.steampowered.com/about/)
+* [CDisplayEx](https://www.cdisplayex.com/desktop/)
 
 ## Optional HOME applications
 
@@ -154,8 +155,6 @@ winget install -e --id GlenSawyer.MP3Gain
 winget install -e --id Garmin.GarminExpress
 winget install -e --id LIGHTNINGUK.ImgBurn
 ```
-
-[CDisplayEx](https://www.cdisplayex.com/desktop/)
 
 ## Work Applications
 
