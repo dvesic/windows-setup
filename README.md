@@ -46,6 +46,7 @@ New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.Wind
 * [paint.net](https://www.microsoft.com/store/productId/9NBHCS1LX4R0) 
 * [Deezer Music](https://www.microsoft.com/store/productId/9NBLGGH6J7VV)
 * [DBeaver CE](https://www.microsoft.com/store/productId/9PNKDR50694P)
+  * You need Oracle JRE/JDK for this: `winget install -e --id Oracle.JDK.19`
 * [Sysinternals Suite](https://www.microsoft.com/store/productId/9P7KNL5RWT25)
 * [Mp3Tag](https://www.microsoft.com/store/productId/9NN77TCQ1NC8)
 
