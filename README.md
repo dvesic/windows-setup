@@ -109,6 +109,7 @@ format
 * [Git.Git](https://git-scm.com/)
   * `git config --global user.name "dvesic"`
   * `git config --global user.email "Dejan@Vesic.Org"`
+  * Check for update: `git update-git-for-windows`
   * Apart from using git, you can use OpenSSL within installation for key generation:
     * `"%ProgramW6432%\Git\usr\bin\ssh-keygen.exe" -t ecdsa -b 521 -f key.private`
     * Keys should be stored in `"%USERPROFILE%\.ssh"`
