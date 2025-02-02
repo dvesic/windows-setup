@@ -7,7 +7,22 @@
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "Dropbox.Dropbox"
+					"PackageIdentifier" : "Microsoft.Office"
+				},
+				{
+					"PackageIdentifier" : "JetBrains.PyCharm.Professional"
+				},
+				{
+					"PackageIdentifier" : "WinSCP.WinSCP"
+				},
+				{
+					"PackageIdentifier" : "WinMerge.WinMerge"
+				},
+				{
+					"PackageIdentifier" : "Git.Git"
+				},				
+				{
+					"PackageIdentifier" : "GitHub.cli"
 				},
 				{
 					"PackageIdentifier" : "MediaArea.MediaInfo.GUI"
