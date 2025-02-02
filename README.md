@@ -6,12 +6,22 @@ This is not usual "setup" guide; this is more quick and efficient guide (and mos
 
 Also, this targets minimum applications (core) + specific ones for home usage (home). Given that this is higly dependent on what you actually use PC for, it is not universal list :smile:
 
-I believe that general principles (MS Store, WinGet + Cloud storage) can be applied to everyone.
+I believe that general principles (MS Store, WinGet + Cloud storage) can be applied to everyone:
+
+* Any created artifact (= files) and configuration store on cloud storage
+* Make installation breeze, using automation (MS Store / WinGet) and minimalist approach what is actually needed
+* Use existing mechanisms (VS Code Settings Sync, PyCharm Settings Sync, cloud for file based settings) to sync various details between workplaces
+
+Having that, I split installation into three phases:
+
+1. **Essential** - for OS and core (Cloud services)
+2. **Core Applications** - mandatory ones, no matter type of machine (Home/Work) is in question
+3. **Rest** - either for fun/hobbies or just addition to previous list
 
 ## Essential
 
 * [Windows 11](https://www.microsoft.com/software-download/windows11), fully patched (Windows 10 will do, but I do not see point of using EOL operating system)
-* Adding OpenSSL client capability (Elevated PowerShell): `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
+  * Adding OpenSSL client capability (Elevated PowerShell): `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
 * YU Keyboard from [vesic.org](https://www.vesic.org/programi/nasa-slova-na-us-tastaturi-resenje-2005-e/)
   * This is "local" solution for typing accent characters (ćčšđžĆČŠĐŽ) for Balkan nations (Serbian, Bosnian, Croatian...)
 * Cloud storage; any will do, but I prefer those which are mirrored on file system (Google Drive, OneDrive) - easier to work with
@@ -21,8 +31,13 @@ I believe that general principles (MS Store, WinGet + Cloud storage) can be appl
 Why MS Store? One time install, tied to MS Account, easy to install on other machine, auto-update...
 
 * [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701)
-  * Settings file location: `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`
-  * Re-mapping settings file to point out to cloud location: `mklink settings.json "G:\My Drive\Projects\Win.Terminal\settings.json"`
+  * Powershell script [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings:
+  
+```powershell
+Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
+New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "G:\My Drive\Projects\Win.Terminal"
+  ```
+  
 * [App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)
 * [Visual Studio Code](https://apps.microsoft.com/store/detail/XP9KHM4BK9FZ7Q)
   * Connect to github or MS Account for settings synhronisation
@@ -31,6 +46,7 @@ Why MS Store? One time install, tied to MS Account, easy to install on other mac
 * [paint.net](https://www.microsoft.com/store/productId/9NBHCS1LX4R0) 
 * [Deezer Music](https://www.microsoft.com/store/productId/9NBLGGH6J7VV)
 * [DBeaver CE](https://www.microsoft.com/store/productId/9PNKDR50694P)
+  * You need Oracle JRE/JDK for this: `winget install -e --id Oracle.JDK.19`
 * [Sysinternals Suite](https://www.microsoft.com/store/productId/9P7KNL5RWT25)
 * [Mp3Tag](https://www.microsoft.com/store/productId/9NN77TCQ1NC8)
 
@@ -93,6 +109,7 @@ format
 * [Git.Git](https://git-scm.com/)
   * `git config --global user.name "dvesic"`
   * `git config --global user.email "Dejan@Vesic.Org"`
+  * Check for update: `git update-git-for-windows`
   * Apart from using git, you can use OpenSSL within installation for key generation:
     * `"%ProgramW6432%\Git\usr\bin\ssh-keygen.exe" -t ecdsa -b 521 -f key.private`
     * Keys should be stored in `"%USERPROFILE%\.ssh"`
@@ -101,6 +118,8 @@ format
 * WinMerge.WinMerge
 * [Anaconda.Miniconda3](https://docs.conda.io/en/latest/miniconda.html)
 * [JetBrains.PyCharm.Professional](https://www.jetbrains.com/pycharm/)
+
+Finally, if you are into python development, I do wholeheartly suggest to look into this repository - [Perfect python 4 Windows](https://github.com/dvesic/perfect-python-4-windows) as well as [Python Skeleton](https://github.com/dvesic/python-skeleton) - both based on significant experience.
 
 ### Optional CORE applications
 
@@ -135,9 +154,10 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 * [calibre.calibre](https://calibre-ebook.com/)
 * [MediaArea.MediaInfo.GUI](https://mediaarea.net/en/MediaInfo)
 
-#### Gaming
+#### Gaming / fun
 
 * [Valve.Steam](https://store.steampowered.com/about/)
+* [CDisplayEx](https://www.cdisplayex.com/desktop/)
 
 ## Optional HOME applications
 
@@ -152,8 +172,6 @@ winget install -e --id GlenSawyer.MP3Gain
 winget install -e --id Garmin.GarminExpress
 winget install -e --id LIGHTNINGUK.ImgBurn
 ```
-
-[CDisplayEx](https://www.cdisplayex.com/desktop/)
 
 ## Work Applications
 
