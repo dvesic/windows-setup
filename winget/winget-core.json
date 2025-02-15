@@ -1,11 +1,53 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2023-01-14T10:39:35.864-00:00",
+	"CreationDate" : "2025-02-15T14:19:12.363-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys"
+				},
 				{
 					"PackageIdentifier" : "7zip.7zip"
 				},
@@ -13,7 +55,7 @@
 					"PackageIdentifier" : "Ghisler.TotalCommander"
 				},
 				{
-					"PackageIdentifier" : "Skillbrains.Lightshot"
+					"PackageIdentifier" : "Flameshot.Flameshot"
 				},
 				{
 					"PackageIdentifier" : "nomacs.nomacs"
@@ -25,13 +67,19 @@
 					"PackageIdentifier" : "Google.Chrome"
 				},
 				{
-					"PackageIdentifier" : "Viber.Viber"
+					"PackageIdentifier" : "Mozilla.Firefox"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerShell"
+					"PackageIdentifier" : "Rakuten.Viber"
 				},
 				{
 					"PackageIdentifier" : "CodecGuide.K-LiteCodecPack.Standard"
+				},
+				{
+					"PackageIdentifier" : "PDFsam.PDFsam"
+				},
+				{
+					"PackageIdentifier" : "AngusJohnson.PDFTKBuilder"
 				},
 				{
 					"PackageIdentifier" : "GnuWin32.Wget"
@@ -46,5 +94,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.4.3132-preview"
+	"WinGetVersion" : "1.10.300"
 }
