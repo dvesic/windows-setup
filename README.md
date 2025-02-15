@@ -4,7 +4,7 @@
 
 This is not usual "setup" guide; this is more quick and efficient guide (and mostly reminder to myself :grinning:) how to setup blank machine with least amount of effort.
 
-Also, this targets minimum applications (core) + specific ones for home usage (home). Given that this is higly dependent on what you actually use PC for, it is not universal list :smile:
+Also, this targets minimum applications (core) + specific ones for home usage/development (home). Given that this is higly dependent on what you actually use PC for, it is not universal list :smile:
 
 I believe that general principles (MS Store, WinGet + Cloud storage) can be applied to everyone:
 
