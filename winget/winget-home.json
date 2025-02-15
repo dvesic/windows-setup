@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2023-01-14T10:39:35.864-00:00",
+	"CreationDate" : "2025-02-15T15:42:06.570-00:00",
 	"Sources" : 
 	[
 		{
@@ -25,10 +25,10 @@
 					"PackageIdentifier" : "GitHub.cli"
 				},
 				{
-					"PackageIdentifier" : "MediaArea.MediaInfo.GUI"
+					"PackageIdentifier" : "dbeaver.dbeaver"
 				},
 				{
-					"PackageIdentifier" : "AngusJohnson.PDFTKBuilder"
+					"PackageIdentifier" : "MediaArea.MediaInfo.GUI"
 				},
 				{
 					"PackageIdentifier" : "Amazon.SendToKindle"
@@ -43,10 +43,16 @@
 					"PackageIdentifier" : "Google.Drive"
 				},
 				{
-					"PackageIdentifier" : "TrackerSoftware.PDF-XChangeEditor"
+					"PackageIdentifier" : "Rakuten.Viber"
 				},
 				{
-					"PackageIdentifier" : "PDFsam.PDFsam"
+					"PackageIdentifier" : "Adobe.Acrobat.Reader.64-bit"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WSL"
+				},
+				{
+					"PackageIdentifier" : "TrackerSoftware.PDF-XChangeEditor"
 				}
 			],
 			"SourceDetails" : 
@@ -58,5 +64,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.4.3132-preview"
+	"WinGetVersion" : "1.10.300"
 }

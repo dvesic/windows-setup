@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-02-15T14:19:12.363-00:00",
+	"CreationDate" : "2025-02-15T15:42:06.570-00:00",
 	"Sources" : 
 	[
 		{
@@ -70,7 +70,7 @@
 					"PackageIdentifier" : "Mozilla.Firefox"
 				},
 				{
-					"PackageIdentifier" : "Rakuten.Viber"
+					"PackageIdentifier" : "Microsoft.Edge"
 				},
 				{
 					"PackageIdentifier" : "CodecGuide.K-LiteCodecPack.Standard"
@@ -80,6 +80,9 @@
 				},
 				{
 					"PackageIdentifier" : "AngusJohnson.PDFTKBuilder"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode"
 				},
 				{
 					"PackageIdentifier" : "GnuWin32.Wget"
