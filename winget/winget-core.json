@@ -91,7 +91,7 @@
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
 				},
 				{
-					"PackageIdentifier" : "GnuWin32.Wget"
+					"PackageIdentifier" : "JernejSimoncic.Wget"
 				}
 			],
 			"SourceDetails" : 
