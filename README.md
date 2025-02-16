@@ -4,13 +4,16 @@
 
 This is not usual "setup" guide; this is more quick and efficient guide (and mostly reminder to myself :grinning:) how to setup blank machine with least amount of effort.
 
-Also, this targets minimum applications (core) + specific ones for home usage/development (home). Given that this is higly dependent on what you actually use PC for, it is not universal list :smile:
+Also, this targets minimum applications (core) + specific ones for home usage/development (home). Given that this is higly dependent on what you actually use PC for, it is
+not universal list :smile:
 
 I believe that general principles (MS Store, WinGet + Cloud storage) can be applied to everyone:
 
-* Any created artifact (= files) and configuration store on cloud storage
+* Any created artifact (= files) and configuration store on cloud storage/GitHub
 * Make installation breeze, using automation (MS Store / WinGet) and minimalist approach what is actually needed
 * Use existing mechanisms (VS Code Settings Sync, PyCharm Settings Sync, cloud for file based settings) to sync various details between workplaces
+* Finally, I suggest that for testing and fine tuning you use [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/), excellent low profile Win instance. You can install _winget_ in Sandbox via Windows PowerShell,
+details [here](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget-on-windows-sandbox).
 
 Having that, I split installation into three phases:
 
@@ -23,32 +26,32 @@ Having that, I split installation into three phases:
 * [Windows 11](https://www.microsoft.com/software-download/windows11), fully patched (Windows 10 will do, but I do not see point of using EOL operating system)
   * Adding OpenSSL client capability (Elevated PowerShell): `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
 * YU Keyboard from [vesic.org](https://www.vesic.org/programi/nasa-slova-na-us-tastaturi-resenje-2005-e/)
-  * This is "local" solution for typing accent characters (ćčšđžĆČŠĐŽ) for Balkan nations (Serbian, Bosnian, Croatian...)
+  * This is "local" solution for typing accent characters (ćčšđžĆČŠĐŽ) for Balkan nations (Serbian, Bosnian, Croatian, Slovenian...) on non-YU keyboards.
 * Cloud storage; any will do, but I prefer those which are mirrored on file system (Google Drive, OneDrive) - easier to work with
 
 ## MS Store
 
 Why MS Store? One time install, tied to MS Account, easy to install on other machine, auto-update...
 
+UPDATE: got couple of comments that this installation is "Store heavy", offering less flexibility than "pure" _winget_ installation. Having that in mind,
+this version of installation is moved toward that goal - only actual _winget_ and _Windows Notepad_ should be installed over MS store - everything else can be done over
+_winget_ itself:
+
+* [App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)
+
+* [Windows Notepad](https://www.microsoft.com/store/productId/9MSMLRH6LZF3)
+
 * [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701)
-  * Powershell script [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings:
+  * Currently, there is no option to change Setting folder of Windows Terminal. In order to correct that (and store it on cloud storage), here is Powershell script:
+  [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings:
   
 ```powershell
 Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "G:\My Drive\Projects\Win.Terminal"
   ```
-  
-* [App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)
-* [Visual Studio Code](https://apps.microsoft.com/store/detail/XP9KHM4BK9FZ7Q)
-  * Connect to github or MS Account for settings synhronisation
-* [PowerToys](https://apps.microsoft.com/store/detail/XP89DCGQ3K6VLD)
-* [Windows Notepad](https://www.microsoft.com/store/productId/9MSMLRH6LZF3)
-* [paint.net](https://www.microsoft.com/store/productId/9NBHCS1LX4R0) 
-* [Deezer Music](https://www.microsoft.com/store/productId/9NBLGGH6J7VV)
+
 * [DBeaver CE](https://www.microsoft.com/store/productId/9PNKDR50694P)
   * You need Oracle JRE/JDK for this: `winget install -e --id Oracle.JDK.19`
-* [Sysinternals Suite](https://www.microsoft.com/store/productId/9P7KNL5RWT25)
-* [Mp3Tag](https://www.microsoft.com/store/productId/9NN77TCQ1NC8)
 
 Once WinGet is installed, you are ready to install Core applications:
 

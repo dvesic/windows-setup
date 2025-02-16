@@ -37,6 +37,15 @@
 					"PackageIdentifier" : "Valve.Steam"
 				},
 				{
+					"PackageIdentifier" : "FlorianHeidenreich.Mp3tag"
+				},
+				{
+					"PackageIdentifier" : "dbeaver.dbeaver"
+				},
+				{
+					"PackageIdentifier" : "Deezer.Deezer"
+				},
+				{
 					"PackageIdentifier" : "calibre.calibre"
 				},
 				{

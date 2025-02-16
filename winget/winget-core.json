@@ -49,6 +49,9 @@
 					"PackageIdentifier" : "Microsoft.PowerToys"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.Sysinternals"
+				},
+				{
 					"PackageIdentifier" : "7zip.7zip"
 				},
 				{
@@ -74,6 +77,9 @@
 				},
 				{
 					"PackageIdentifier" : "CodecGuide.K-LiteCodecPack.Standard"
+				},
+				{
+					"PackageIdentifier" : "dotPDN.PaintDotNet"
 				},
 				{
 					"PackageIdentifier" : "PDFsam.PDFsam"
