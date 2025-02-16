@@ -13,7 +13,8 @@ I believe that general principles (MS Store, WinGet + Cloud storage) can be appl
 * Make installation breeze, using automation (MS Store / WinGet) and minimalist approach what is actually needed
 * Use existing mechanisms (VS Code Settings Sync, PyCharm Settings Sync, cloud for file based settings) to sync various details between workplaces
 * Finally, I suggest that for testing and fine tuning you use [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/), excellent low profile Win instance. You can install _winget_ in Sandbox via Windows PowerShell,
-details [here](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget-on-windows-sandbox).
+details [here](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget-on-windows-sandbox). Do not forget to add `-Scope AllUsers` given that bunch of applications
+are system ones.
 
 Having that, I split installation into three phases:
 
