@@ -7,9 +7,6 @@
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "Microsoft.Edge"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
 				},
 				{
