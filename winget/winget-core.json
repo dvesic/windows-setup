@@ -46,10 +46,10 @@
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerToys"
+					"PackageIdentifier" : "Microsoft.OpenSSH.Beta"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.Sysinternals"
+					"PackageIdentifier" : "Microsoft.PowerToys"
 				},
 				{
 					"PackageIdentifier" : "7zip.7zip"

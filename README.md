@@ -25,10 +25,9 @@ Having that, I split installation into three phases:
 ## Essential
 
 * [Windows 11](https://www.microsoft.com/software-download/windows11), fully patched (Windows 10 will do, but I do not see point of using EOL operating system)
-  * Adding OpenSSL client capability (Elevated PowerShell): `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
+* Cloud storage; any will do, but I prefer those which are mirrored on file system (Google Drive, OneDrive) - easier to work with
 * YU Keyboard from [vesic.org](https://www.vesic.org/programi/nasa-slova-na-us-tastaturi-resenje-2005-e/)
   * This is "local" solution for typing accent characters (ćčšđžĆČŠĐŽ) for Balkan nations (Serbian, Bosnian, Croatian, Slovenian...) on non-YU keyboards.
-* Cloud storage; any will do, but I prefer those which are mirrored on file system (Google Drive, OneDrive) - easier to work with
 
 ## MS Store
 
@@ -132,6 +131,12 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 ## Breevy
 
 Excellent [Text replacement](http://www.16software.com/breevy/) tool. Recommend portable version with settings stored on Cloud.
+
+## SysInternals
+
+Great system package, from Microsoft itself - [SysInternals](https://learn.microsoft.com/en-us/sysinternals/):
+
+`winget install -e --id Microsoft.Sysinternals`
 
 ## Home Applications
 
