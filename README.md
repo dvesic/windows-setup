@@ -12,8 +12,7 @@ I believe that general principles (MS Store, WinGet + Cloud storage) can be appl
 * Any created artifact (= files) and configuration store on cloud storage/GitHub
 * Make installation breeze, using automation (MS Store / WinGet) and minimalist approach what is actually needed
 * Use existing mechanisms (VS Code Settings Sync, PyCharm Settings Sync, cloud for file based settings) to sync various details between workplaces
-* Finally, I suggest that for testing and fine tuning you use [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/), excellent low profile Win instance. You can install _winget_ in Sandbox via Windows PowerShell,
-details [here](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget-on-windows-sandbox). Do not forget to add `-Scope AllUsers` given that bunch of applications
+* Finally, I suggest that for testing and fine tuning you use [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/), excellent low profile Win instance. You can install _winget_ in Sandbox via Windows PowerShell, details [here](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget-on-windows-sandbox). Do not forget to add `-Scope AllUsers` given that bunch of applications
 are system ones.
 
 Having that, I split installation into three phases:
@@ -31,7 +30,7 @@ Having that, I split installation into three phases:
 
 ## MS Store
 
-Why MS Store? One time install, tied to MS Account, easy to install on other machine, auto-update...
+Why MS Store? One time install, tied to MS Account, easy to install on other machine, auto-update...Also, some of applications simply can't be installed over _winget_, at least for now.
 
 UPDATE: got couple of comments that this installation is "Store heavy", offering less flexibility than "pure" _winget_ installation. Having that in mind,
 this version of installation is moved toward that goal - only actual _winget_ and _Windows Notepad_ should be installed over MS store - everything else can be done over
@@ -41,7 +40,7 @@ _winget_ itself:
 
 * [Windows Notepad](https://www.microsoft.com/store/productId/9MSMLRH6LZF3)
 
-* [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701)
+* [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701) - actual installation is over _winget_. Here are just details how can you keep your configuration on cloud storage.
   * Currently, there is no option to change Setting folder of Windows Terminal. In order to correct that (and store it on cloud storage), here is Powershell script:
   [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings:
   
@@ -49,9 +48,6 @@ _winget_ itself:
 Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "G:\My Drive\Projects\Win.Terminal"
   ```
-
-* [DBeaver CE](https://www.microsoft.com/store/productId/9PNKDR50694P)
-  * You need Oracle JRE/JDK for this: `winget install -e --id Oracle.JDK.19`
 
 Once WinGet is installed, you are ready to install Core applications:
 
@@ -77,56 +73,42 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 ### List of core applications
 
-#### Essential
+#### Essentials
 
+* [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) - sooner or later (usually sooner), one of applications will require this.
+* [Microsoft.WindowsTerminal](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+* [Microsoft.PowerShell](https://learn.microsoft.com/en-us/powershell/)
+* [Microsoft.PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
+* [Microsoft.OpenSSH.Beta](https://github.com/PowerShell/openssh-portable)
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
-* [Ghisler.TotalCommander](https://www.ghisler.com/)
+* [Ghisler.TotalCommander](https://www.ghisler.com/). Settings for shortcut, to use cloud based ini files:
   * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
-  * `TOTALCMD64.EXE /i="C:\Users\dvesic\OneDrive - IGT PLC\Utils\totalcmd\wincmd.ini" /F="C:\Users\dvesic\OneDrive - IGT PLC\Utils\totalcmd\wcx_ftp.ini"`
-  * `O:\PortableApps\PortableApps\WinMergePortable\WinMergePortable.exe /r %C1 %C2`
-* [CodecGuide.K-LiteCodecPack.Standard](https://codecguide.com/download_k-lite_codec_pack_standard.htm) - set of codec files and player for any video
-format
+* [CodecGuide.K-LiteCodecPack.Standard](https://codecguide.com/download_k-lite_codec_pack_standard.htm) - set of codec files and player for any video format
+* [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
 
 #### Browsers
 
-* Google.Chrome
+* [Google.Chrome](https://www.google.com/chrome/)
   * Google Keep as separate application: `"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --profile-directory=Default --no-proxy-server --app=https://keep.google.com`
 * [Opera.Opera](https://www.opera.com/)
   * Launching Opera w/o proxy: `C:\Users\dvesic\AppData\Local\Programs\Opera\launcher.exe --no-proxy-server="`
-
-#### Communication
-
-* [OpenWhisperSystems.Signal](https://signal.org/) Secure, open source instant messenger
-* [Viber.Viber](https://www.viber.com/en/)
+* [Mozilla.Firefox](https://www.mozilla.org/en-US/firefox/new/)
 
 #### Tools
 
-* [Skillbrains.Lightshot](https://app.prntscr.com/en/index.html) - Fast and efficient screenshot application
-* Microsoft.PowerShell
-* Microsoft.Office
-* [WinSCP.WinSCP](https://winscp.net/eng/index.php)
-  * Use `/ini` to point out to cloud settings file: `winscp.exe /ini="G:\My Drive\Utils\WinSCP\WinSCP.ini"`
+* [Flameshot.Flameshot](https://flameshot.org/) - Open Source Screeshot software
+* [nomacs.nomacs](https://nomacs.org/) - Open Source Image Viewer
+* [dotPDN.PaintDotNet](https://getpaint.net/) - Great free image and photo editing software
+* [JernejSimoncic.Wget] (https://eternallybored.org/misc/wget/) - GNU Wget
 
-#### Development / Python
+#### PDF Tools
 
-* [Git.Git](https://git-scm.com/)
-  * `git config --global user.name "dvesic"`
-  * `git config --global user.email "Dejan@Vesic.Org"`
-  * Check for update: `git update-git-for-windows`
-  * Apart from using git, you can use OpenSSL within installation for key generation:
-    * `"%ProgramW6432%\Git\usr\bin\ssh-keygen.exe" -t ecdsa -b 521 -f key.private`
-    * Keys should be stored in `"%USERPROFILE%\.ssh"`
-* GitHub.cli
-* GnuWin32.Wget
-* WinMerge.WinMerge
-* [Anaconda.Miniconda3](https://docs.conda.io/en/latest/miniconda.html)
-* [JetBrains.PyCharm.Professional](https://www.jetbrains.com/pycharm/)
-
-Finally, if you are into python development, I do wholeheartly suggest to look into this repository - [Perfect python 4 Windows](https://github.com/dvesic/perfect-python-4-windows) as well as [Python Skeleton](https://github.com/dvesic/python-skeleton) - both based on significant experience.
+* [PDFsam.PDFsam](https://pdfsam.org/) - _PDFsam Basic_: split, merge, extract pages, rotate and mix PDF files
+* [AngusJohnson.PDFTKBuilder](http://angusj.com/pdftkb/) - free graphical interface to [PDFTK](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
 
 ### Optional CORE applications
 
-* [Grep](https://man7.org/linux/man-pages/man1/grep.1.html), windows binary: `winget install -e --id GnuWin32.Grep`
+* [GnuWin32.Grep](https://man7.org/linux/man-pages/man1/grep.1.html), windows binary: `winget install -e --id GnuWin32.Grep`
 
 ## Breevy
 
@@ -134,7 +116,7 @@ Excellent [Text replacement](http://www.16software.com/breevy/) tool. Recommend 
 
 ## SysInternals
 
-Great system package, from Microsoft itself - [SysInternals](https://learn.microsoft.com/en-us/sysinternals/):
+Great system package, from Microsoft itself - [Microsoft.Sysinternals](https://learn.microsoft.com/en-us/sysinternals/):
 
 `winget install -e --id Microsoft.Sysinternals`
 
@@ -146,16 +128,45 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 
 ### List of applications
 
+#### Home Office
+
+* [Microsoft.Office](https://www.microsoft.com/EN-US/microsoft-365/buy/compare-all-microsoft-365-products?icid=MSCOM_QL_M365) Microsoft 365 Family
+
+#### Development / Python
+
+* [Git.Git](https://git-scm.com/)
+  * `git config --global user.name "dvesic"`
+  * `git config --global user.email "Dejan@Vesic.Org"`
+  * Check for update: `git update-git-for-windows`
+  * Apart from using git, you can use OpenSSL within installation for key generation:
+    * `"%ProgramW6432%\Git\usr\bin\ssh-keygen.exe" -t ecdsa -b 521 -f key.private`
+    * Keys should be stored in `"%USERPROFILE%\.ssh"`
+* [GitHub.cli](https://cli.github.com/)
+* [dbeaver.dbeaver](https://dbeaver.io/) - Universal database tool
+
+* [WinMerge.WinMerge](https://winmerge.org/?lang=en) -  Open Source differencing and merging tool for Windows
+* [JetBrains.PyCharm.Professional](https://www.jetbrains.com/pycharm/) All purpose editor and IDE for Python. There is community (free) edition as well.
+* [WinSCP.WinSCP](https://winscp.net/eng/index.php)
+  * Use `/ini` to point out to cloud settings file: `winscp.exe /ini="G:\My Drive\Utils\WinSCP\WinSCP.ini"`
+* [Microsoft.WSL](https://learn.microsoft.com/en-us/windows/wsl/install) MS Windows Subsystem for Linux
+
+Finally, if you are into python development, I do wholeheartly suggest to look into this repository - [Perfect python 4 Windows](https://github.com/dvesic/perfect-python-4-windows) as well as [Python Skeleton](https://github.com/dvesic/python-skeleton) - both based on significant experience.
+
+
 #### Cloud
 
-* Dropbox.Dropbox
-* Google.Drive
+* (OneDrive comes with Windows)
+* [Google.Drive](https://workspace.google.com/products/drive/)
+* [Dropbox.Dropbox](https://www.dropbox.com/)
 
-#### PDF Tools
+#### Tools
 
-* [PDFsam.PDFsam](https://pdfsam.org/) - *PDFsam Basic*: split, merge, extract pages, rotate and mix PDF files
-* [AngusJohnson.PDFTKBuilder](http://angusj.com/pdftkb/) - free graphical interface to [PDFTK](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
-* [TrackerSoftware.PDF-XChangeEditor](https://www.tracker-software.com/product/pdf-xchange-editor) 
+* [TrackerSoftware.PDF-XChangeEditor](https://www.tracker-software.com/product/pdf-xchange-editor)
+* [Adobe.Acrobat.Reader.64-bit](https://get.adobe.com/reader/)
+
+#### Communication
+
+* [Rakuten.Viber](https://www.viber.com/en/)
 
 #### Misc
 
@@ -166,7 +177,9 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 #### Gaming / fun
 
 * [Valve.Steam](https://store.steampowered.com/about/)
-* [CDisplayEx](https://www.cdisplayex.com/desktop/)
+* [CDisplayEx](https://www.cdisplayex.com/desktop/) - Light, Efficient CBR Reader (no _winget_ install)
+* [FlorianHeidenreich.Mp3tag](https://www.mp3tag.de/en/) - Easy-to-use tool to edit metadata of audio files.
+* [Deezer.Deezer](https://www.deezer.com)
 
 ## Optional HOME applications
 
