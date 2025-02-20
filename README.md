@@ -99,7 +99,7 @@ Install it last, after all other software and then [enable ligatures](https://gi
 * [Flameshot.Flameshot](https://flameshot.org/) - Open Source Screeshot software
 * [nomacs.nomacs](https://nomacs.org/) - Open Source Image Viewer
 * [dotPDN.PaintDotNet](https://getpaint.net/) - Great free image and photo editing software
-* [JernejSimoncic.Wget] (https://eternallybored.org/misc/wget/) - GNU Wget
+* [JernejSimoncic.Wget](https://eternallybored.org/misc/wget/) - GNU Wget
 
 #### PDF Tools
 
