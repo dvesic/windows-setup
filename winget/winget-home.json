@@ -10,15 +10,6 @@
 					"PackageIdentifier" : "Microsoft.Office"
 				},
 				{
-					"PackageIdentifier" : "JetBrains.PyCharm.Professional"
-				},
-				{
-					"PackageIdentifier" : "WinSCP.WinSCP"
-				},
-				{
-					"PackageIdentifier" : "WinMerge.WinMerge"
-				},
-				{
 					"PackageIdentifier" : "Git.Git"
 				},				
 				{
@@ -28,10 +19,34 @@
 					"PackageIdentifier" : "dbeaver.dbeaver"
 				},
 				{
-					"PackageIdentifier" : "MediaArea.MediaInfo.GUI"
+					"PackageIdentifier" : "WinMerge.WinMerge"
+				},
+				{
+					"PackageIdentifier" : "JetBrains.PyCharm.Professional"
+				},
+				{
+					"PackageIdentifier" : "WinSCP.WinSCP"
+				},
+				{
+					"PackageIdentifier" : "Google.Drive"
+				},
+				{
+					"PackageIdentifier" : "TrackerSoftware.PDF-XChangeEditor"
+				},
+				{
+					"PackageIdentifier" : "Adobe.Acrobat.Reader.64-bit"
+				},
+				{
+					"PackageIdentifier" : "Rakuten.Viber"
 				},
 				{
 					"PackageIdentifier" : "Amazon.SendToKindle"
+				},
+				{
+					"PackageIdentifier" : "calibre.calibre"
+				},
+				{
+					"PackageIdentifier" : "MediaArea.MediaInfo.GUI"
 				},
 				{
 					"PackageIdentifier" : "Valve.Steam"
@@ -40,28 +55,10 @@
 					"PackageIdentifier" : "FlorianHeidenreich.Mp3tag"
 				},
 				{
-					"PackageIdentifier" : "dbeaver.dbeaver"
-				},
-				{
 					"PackageIdentifier" : "Deezer.Deezer"
 				},
 				{
-					"PackageIdentifier" : "calibre.calibre"
-				},
-				{
-					"PackageIdentifier" : "Google.Drive"
-				},
-				{
-					"PackageIdentifier" : "Rakuten.Viber"
-				},
-				{
-					"PackageIdentifier" : "Adobe.Acrobat.Reader.64-bit"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.WSL"
-				},
-				{
-					"PackageIdentifier" : "TrackerSoftware.PDF-XChangeEditor"
 				}
 			],
 			"SourceDetails" : 

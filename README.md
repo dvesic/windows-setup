@@ -163,7 +163,7 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 * [Google.Drive](https://workspace.google.com/products/drive/)
 * [Dropbox.Dropbox](https://www.dropbox.com/)
 
-#### Tools
+#### Tools (PDF)
 
 * [TrackerSoftware.PDF-XChangeEditor](https://www.tracker-software.com/product/pdf-xchange-editor)
 * [Adobe.Acrobat.Reader.64-bit](https://get.adobe.com/reader/)
