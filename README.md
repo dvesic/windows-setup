@@ -160,7 +160,7 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 #### Cloud
 
 * (OneDrive comes with Windows)
-* [Google.Drive](https://workspace.google.com/products/drive/)
+* [Google.GoogleDrive](https://workspace.google.com/products/drive/)
 * [Dropbox.Dropbox](https://www.dropbox.com/)
 
 #### Tools (PDF)

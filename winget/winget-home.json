@@ -28,7 +28,7 @@
 					"PackageIdentifier" : "WinSCP.WinSCP"
 				},
 				{
-					"PackageIdentifier" : "Google.Drive"
+					"PackageIdentifier" : "Google.GoogleDrive"
 				},
 				{
 					"PackageIdentifier" : "TrackerSoftware.PDF-XChangeEditor"
