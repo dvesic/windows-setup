@@ -2,10 +2,11 @@
 
 ## All files and instructions needed to setup Home/Work machine under Windows 11
 
-This is not usual "setup" guide; this is more quick and efficient guide (and mostly reminder to myself :grinning:) how to setup blank machine with least amount of effort.
+This is not usual "setup" guide; this is more quick and efficient guide (and mostly reminder to myself :grinning:)
+how to setup blank machine with least amount of effort.
 
-Also, this targets minimum applications (core) + specific ones for home usage/development (home). Given that this is higly dependent on what you actually use PC for, it is
-not universal list :smile:
+Also, this targets minimum applications (core) + specific ones for home usage/development (home). Given that this is higly dependent
+on what you actually use PC for, it is not universal list :smile:
 
 I believe that general principles (MS Store, WinGet + Cloud storage) can be applied to everyone:
 
@@ -20,6 +21,9 @@ Install-PackageProvider -Name NuGet -Force
 Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery -Scope AllUsers
 Repair-WinGetPackageManager
 ```
+
+> [!NOTE]  
+> Last command often fails for first time, so expect to repeat it.
 
 Having that, I split installation into three phases:
 
@@ -43,9 +47,7 @@ this version of installation is moved toward that goal - only actual _winget_ an
 _winget_ itself:
 
 * [App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)
-
 * [Windows Notepad](https://www.microsoft.com/store/productId/9MSMLRH6LZF3)
-
 * [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701) - actual installation is over _winget_. Here are just details how can you keep your configuration on cloud storage.
   * Currently, there is no option to change Setting folder of Windows Terminal. In order to correct that (and store it on cloud storage), here is Powershell script:
   [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings:
@@ -122,9 +124,7 @@ Excellent [Text replacement](http://www.16software.com/breevy/) tool. Recommend 
 
 ## SysInternals
 
-Great system package, from Microsoft itself - [Microsoft.Sysinternals](https://learn.microsoft.com/en-us/sysinternals/):
-
-`winget install -e --id Microsoft.Sysinternals`
+[Microsoft.Sysinternals](https://learn.microsoft.com/en-us/sysinternals/) - Great system package, from Microsoft itself: `winget install -e --id Microsoft.Sysinternals`
 
 ## Home Applications
 
@@ -149,7 +149,6 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
     * Keys should be stored in `"%USERPROFILE%\.ssh"`
 * [GitHub.cli](https://cli.github.com/)
 * [dbeaver.dbeaver](https://dbeaver.io/) - Universal database tool
-
 * [WinMerge.WinMerge](https://winmerge.org/?lang=en) -  Open Source differencing and merging tool for Windows
 * [JetBrains.PyCharm.Professional](https://www.jetbrains.com/pycharm/) All purpose editor and IDE for Python. There is community (free) edition as well.
 * [WinSCP.WinSCP](https://winscp.net/eng/index.php)
@@ -157,7 +156,6 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 * [Microsoft.WSL](https://learn.microsoft.com/en-us/windows/wsl/install) MS Windows Subsystem for Linux
 
 Finally, if you are into python development, I do wholeheartly suggest to look into this repository - [Perfect python 4 Windows](https://github.com/dvesic/perfect-python-4-windows) as well as [Python Skeleton](https://github.com/dvesic/python-skeleton) - both based on significant experience.
-
 
 #### Cloud
 
