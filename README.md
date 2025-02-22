@@ -163,10 +163,11 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 * [Google.GoogleDrive](https://workspace.google.com/products/drive/)
 * [Dropbox.Dropbox](https://www.dropbox.com/)
 
-#### Tools (PDF)
+#### Various Tools
 
 * [TrackerSoftware.PDF-XChangeEditor](https://www.tracker-software.com/product/pdf-xchange-editor)
 * [Adobe.Acrobat.Reader.64-bit](https://get.adobe.com/reader/)
+* [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
 
 #### Communication
 
