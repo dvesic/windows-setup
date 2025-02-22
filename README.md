@@ -190,6 +190,8 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 ```bat
 winget install -e --id AnyDeskSoftwareGmbH.AnyDesk
 
+winget install -e --id Microsoft.Sysinternals.RDCMan
+
 winget install -e --id MKVToolNix.MKVToolNix
 winget install -e --id GuinpinSoft.MakeMKV
 
