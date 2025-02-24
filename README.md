@@ -200,6 +200,8 @@ winget install -e --id GlenSawyer.MP3Gain
 
 winget install -e --id Garmin.GarminExpress
 winget install -e --id LIGHTNINGUK.ImgBurn
+
+winget install -e --id Joplin.Joplin
 ```
 
 ## Work Applications
