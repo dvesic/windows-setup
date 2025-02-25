@@ -118,13 +118,17 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 * [GnuWin32.Grep](https://man7.org/linux/man-pages/man1/grep.1.html), windows binary: `winget install -e --id GnuWin32.Grep`
 
-## Breevy
+#### Breevy
 
 Excellent [Text replacement](http://www.16software.com/breevy/) tool. Recommend portable version with settings stored on Cloud.
 
-## SysInternals
+#### SysInternals
 
 [Microsoft.Sysinternals](https://learn.microsoft.com/en-us/sysinternals/) - Great system package, from Microsoft itself: `winget install -e --id Microsoft.Sysinternals`
+
+#### Misc Tools
+
+[Logitech.UnifyingSoftware](https://support.logi.com/hc/en-my/articles/360025297913-Unifying-Software) - for lucky users of Logitech mouse
 
 ## Home Applications
 
@@ -186,7 +190,7 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 * [FlorianHeidenreich.Mp3tag](https://www.mp3tag.de/en/) - Easy-to-use tool to edit metadata of audio files.
 * [Deezer.Deezer](https://www.deezer.com)
 
-## Optional HOME applications
+### Optional HOME applications
 
 ```bat
 winget install -e --id AnyDeskSoftwareGmbH.AnyDesk
