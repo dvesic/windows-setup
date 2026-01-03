@@ -120,10 +120,6 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 * [GnuWin32.Grep](https://man7.org/linux/man-pages/man1/grep.1.html), windows binary: `winget install -e --id GnuWin32.Grep`
 
-#### Breevy
-
-Excellent [Text replacement](http://www.16software.com/breevy/) tool. Recommend portable version with settings stored on Cloud.
-
 #### SysInternals
 
 [Microsoft.Sysinternals](https://learn.microsoft.com/en-us/sysinternals/) - Great system package, from Microsoft itself: `winget install -e --id Microsoft.Sysinternals`
