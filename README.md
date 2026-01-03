@@ -93,6 +93,8 @@ Install it last, after all other software and then [enable ligatures](https://gi
   * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
 * [CodecGuide.K-LiteCodecPack.Standard](https://codecguide.com/download_k-lite_codec_pack_standard.htm) - set of codec files and player for any video format
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
+* [Espanso.Espanso](https://espanso.org/) Open Source text expander
+
 
 #### Browsers
 
