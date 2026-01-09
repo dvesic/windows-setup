@@ -167,7 +167,7 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 
 #### Various Tools
 
-* [TrackerSoftware.PDF-XChangeEditor](https://www.tracker-software.com/product/pdf-xchange-editor)
+* [SumatraPDF.SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) - brilliat application for PDF, eBook (epub, mobi), comic book (cbz/cbr), DjVu, XPS, CHM and image viewer for Windows.
 * [Adobe.Acrobat.Reader.64-bit](https://get.adobe.com/reader/)
 * [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
 * [AutoHotkey.AutoHotkey](https://www.autohotkey.com) Great automation tool
