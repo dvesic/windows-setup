@@ -167,7 +167,7 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 
 #### Various Tools
 
-* [SumatraPDF.SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) - brilliat application for PDF, eBook (epub, mobi), comic book (cbz/cbr), DjVu, XPS, CHM and image viewer for Windows.
+* [SumatraPDF.SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) - brilliant application for PDF, eBook (epub, mobi), comic book (cbz/cbr), DjVu, XPS, CHM and image viewer for Windows.
 * [Adobe.Acrobat.Reader.64-bit](https://get.adobe.com/reader/)
 * [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
 * [AutoHotkey.AutoHotkey](https://www.autohotkey.com) Great automation tool
@@ -185,7 +185,6 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 #### Gaming / fun
 
 * [Valve.Steam](https://store.steampowered.com/about/)
-* [CDisplayEx](https://www.cdisplayex.com/desktop/) - Light, Efficient CBR Reader (no _winget_ install)
 * [FlorianHeidenreich.Mp3tag](https://www.mp3tag.de/en/) - Easy-to-use tool to edit metadata of audio files.
 * [Deezer.Deezer](https://www.deezer.com)
 
