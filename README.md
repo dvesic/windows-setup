@@ -130,13 +130,10 @@ For both tools, **oh-my-posh** and **zoxide** I recommend to keep PowerShell pro
 
 #### Tools
 
-* [Flameshot.Flameshot](https://flameshot.org/) - Open Source Screeshot software
+* [Flameshot.Flameshot](https://flameshot.org/) - Open Source Screenshot software
 * [JernejSimoncic.Wget](https://eternallybored.org/misc/wget/) - GNU Wget
 * [PDFsam.PDFsam](https://pdfsam.org/) - _PDFsam Basic_: split, merge, extract pages, rotate and mix PDF files
-
-##### System Informer
-
-[WinsiderSS.SystemInformer](https://github.com/winsiderss/systeminformer) - A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.
+* [WinsiderSS.SystemInformer](https://github.com/winsiderss/systeminformer) - A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.
 
 ## Home Applications
 
@@ -178,7 +175,7 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 
 * [SumatraPDF.SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) - brilliant application for PDF, eBook (epub, mobi), comic book (cbz/cbr), DjVu, XPS, CHM and image viewer for Windows.
 * [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
-* [Joplin.Joplin](https://joplinapp.org/) Open source, Mark Down note taking application. Excellent sync options between multiple machines.
+* [Joplin.Joplin](https://joplinapp.org/) Open source, Markdown note taking application. Excellent sync options between multiple machines.
 
 #### Communication
 
@@ -214,3 +211,5 @@ winget install -e --id LIGHTNINGUK.ImgBurn
 winget install -e --id Dell.CommandUpdate.Universal
 winget install -e --id Logitech.UnifyingSoftware
 ```
+
+> Last updated: 2026-01-14
