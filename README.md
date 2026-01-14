@@ -50,18 +50,18 @@ _winget_ itself:
 * [Windows Notepad](https://www.microsoft.com/store/productId/9MSMLRH6LZF3)
 * [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701) - actual installation is over _winget_. Here are just details how can you keep your configuration on cloud storage.
   * Currently, there is no option to change Setting folder of Windows Terminal. In order to correct that (and store it on cloud storage), here is Powershell script:
-  [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings:
+  [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings (run _elevated_):
   
 ```powershell
 Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
-New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "G:\My Drive\Projects\Win.Terminal"
+New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "$env:OneDriveConsumer\Utils\WindowsTerminal\LocalState"
   ```
 
 Once WinGet is installed, you are ready to install Core applications:
 
 ## Core Applications
 
-```bat
+```powershell
 winget import -i .\winget\winget-core.json --accept-package-agreements
 ```
 
@@ -87,7 +87,8 @@ Install it last, after all other software and then [enable ligatures](https://gi
 * [Microsoft.WindowsTerminal](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
 * [Microsoft.PowerShell](https://learn.microsoft.com/en-us/powershell/)
 * [Microsoft.PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
-* [Microsoft.OpenSSH.Beta](https://github.com/PowerShell/openssh-portable)
+* ~~Microsoft.OpenSSH.Beta~~ Not needed anymore. Windows 11 has built in SSH. Here is PowerShell script to check / enable (elevation needed):
+[SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
 * [Ghisler.TotalCommander](https://www.ghisler.com/). Settings for shortcut, to use cloud based ini files:
   * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
@@ -118,13 +119,18 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 * [BurntSushi.ripgrep.MSVC](https://github.com/BurntSushi/ripgrep) - **rg** - line-oriented search tool that recursively searches the current directory for a regex pattern.
 * [gerardog.gsudo](https://github.com/gerardog/gsudo) - **sudo** for Windows
-* [ajeetdsouza.zoxide](https://github.com/ajeetdsouza/zoxide) - **zoxide** is a smarter cd command, inspired by z and autojump. Installation details [here](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation).
+* [ajeetdsouza.zoxide](https://github.com/ajeetdsouza/zoxide) - **zoxide** is a smarter cd command, inspired by z and autojump. Installation details [here](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation); add this to your PowerShell profile:
+  ```powershell
+  Invoke-Expression (& { (zoxide init powershell | Out-String) })
+  ```
 * [JanDeDobbeleer.OhMyPosh](https://github.com/JanDeDobbeleer/oh-my-posh) - The **most** configurable prompt utility for any shell.
   * Install fonts directly using Oh My Posh:
   ```powershell
   oh-my-posh font install meslo
   oh-my-posh font install FiraCode
   ```
+* [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
+
 
 #### System Informer
 
@@ -174,6 +180,7 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 
 * [SumatraPDF.SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) - brilliant application for PDF, eBook (epub, mobi), comic book (cbz/cbr), DjVu, XPS, CHM and image viewer for Windows.
 * [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
+* [Joplin.Joplin](https://joplinapp.org/) Open source, Mark Down note taking application. Excellent sync options between multiple machines.
 
 #### Communication
 
@@ -206,11 +213,5 @@ winget install -e --id GlenSawyer.MP3Gain
 winget install -e --id Garmin.GarminExpress
 winget install -e --id LIGHTNINGUK.ImgBurn
 
-winget install -e --id Joplin.Joplin
-```
-
-## Work Applications
-
-```bat
-winget import -i .\winget\winget-work.json --accept-package-agreements
+winget install -e --id Dell.CommandUpdate.Universal
 ```
