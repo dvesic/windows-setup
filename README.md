@@ -77,7 +77,7 @@ winget import -i .\winget\winget-core.json --accept-package-agreements
 
 My work relies on CMD/Windows terminal prompt; one great resource for that is [FiraCode](https://github.com/tonsky/FiraCode) font, monospaced font for development.
 
-Install it last, after all other software and then [enable ligatures](https://github.com/tonsky/FiraCode/wiki#enabling-ligatures) for Windows Terminal, VS Code and PyCharm.
+Install it last, after all other software and then [enable ligatures](https://github.com/tonsky/FiraCode/wiki#enabling-ligatures) for Windows Terminal, VS Code and PyCharm. If you use **Oh My Posh**, instructions for installation are below.
 
 ### List of core applications
 
@@ -114,13 +114,21 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 * [PDFsam.PDFsam](https://pdfsam.org/) - _PDFsam Basic_: split, merge, extract pages, rotate and mix PDF files
 
-### Optional CORE applications
+### Additional CORE applications
 
-* [GnuWin32.Grep](https://man7.org/linux/man-pages/man1/grep.1.html), windows binary: `winget install -e --id GnuWin32.Grep`
+* [BurntSushi.ripgrep.MSVC](https://github.com/BurntSushi/ripgrep) - **rg** - line-oriented search tool that recursively searches the current directory for a regex pattern.
+* [gerardog.gsudo](https://github.com/gerardog/gsudo) - **sudo** for Windows
+* [ajeetdsouza.zoxide](https://github.com/ajeetdsouza/zoxide) - **zoxide** is a smarter cd command, inspired by z and autojump. Installation details [here](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation).
+* [JanDeDobbeleer.OhMyPosh](https://github.com/JanDeDobbeleer/oh-my-posh) - The **most** configurable prompt utility for any shell.
+  * Install fonts directly using Oh My Posh:
+  ```powershell
+  oh-my-posh font install meslo
+  oh-my-posh font install FiraCode
+  ```
 
-#### SysInternals
+#### System Informer
 
-[Microsoft.Sysinternals](https://learn.microsoft.com/en-us/sysinternals/) - Great system package, from Microsoft itself: `winget install -e --id Microsoft.Sysinternals`
+[WinsiderSS.SystemInformer](https://github.com/winsiderss/systeminformer) - A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.
 
 #### Misc Tools
 
@@ -166,7 +174,6 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 
 * [SumatraPDF.SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) - brilliant application for PDF, eBook (epub, mobi), comic book (cbz/cbr), DjVu, XPS, CHM and image viewer for Windows.
 * [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
-* [AutoHotkey.AutoHotkey](https://www.autohotkey.com) Great automation tool
 
 #### Communication
 
