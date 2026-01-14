@@ -91,7 +91,8 @@ Install it last, after all other software and then [enable ligatures](https://gi
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
 * [Ghisler.TotalCommander](https://www.ghisler.com/). Settings for shortcut, to use cloud based ini files:
   * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
-* [CodecGuide.K-LiteCodecPack.Standard](https://codecguide.com/download_k-lite_codec_pack_standard.htm) - set of codec files and player for any video format
+* [clsid2.mpc-hc](https://github.com/clsid2/mpc-hc/) - Excellent video player of all media.
+  * [VideoLAN.VLC](https://www.videolan.org/) This is great alternative to MPC-HC (clsid2 fork)
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
 * [Espanso.Espanso](https://espanso.org/) Open Source text expander
 
