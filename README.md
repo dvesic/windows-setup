@@ -112,6 +112,8 @@ Install it last, after all other software and then [enable ligatures](https://gi
   oh-my-posh font install meslo
   oh-my-posh font install FiraCode
   ```
+For both tools, **oh-my-posh** and **zoxide** I recommend to keep PowerShell profile on cloud drive and use it to SymLink local profile to it. Script for that is [PowerShellProfileSym.ps1](./PowerShellProfileSym.ps1) and minimal PowerShell profile is here: [Microsoft.PowerShell_profile.ps1](./Microsoft.PowerShell_profile.ps1)
+
 
 #### Media (video/image)
 
