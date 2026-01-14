@@ -89,14 +89,36 @@ Install it last, after all other software and then [enable ligatures](https://gi
 * [Microsoft.PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
 * ~~Microsoft.OpenSSH.Beta~~ Not needed anymore. Windows 11 has built in SSH. Here is PowerShell script to check / enable (elevation needed):
 [SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
+* [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
+* [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
+
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
 * [Ghisler.TotalCommander](https://www.ghisler.com/). Settings for shortcut, to use cloud based ini files:
   * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
+
+* [Espanso.Espanso](https://espanso.org/) Open Source text expander
+* [BurntSushi.ripgrep.MSVC](https://github.com/BurntSushi/ripgrep) - **rg** - line-oriented search tool that recursively searches the current directory for a regex pattern.
+* [gerardog.gsudo](https://github.com/gerardog/gsudo) - **sudo** for Windows
+* [ajeetdsouza.zoxide](https://github.com/ajeetdsouza/zoxide) - **zoxide** is a smarter cd command, inspired by z and autojump. Installation details [here](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation); add this to your PowerShell profile:
+  
+  ```powershell
+  Invoke-Expression (& { (zoxide init powershell | Out-String) })
+  ```
+
+* [JanDeDobbeleer.OhMyPosh](https://github.com/JanDeDobbeleer/oh-my-posh) - The **most** configurable prompt utility for any shell.
+  * Install fonts directly using Oh My Posh:
+
+  ```powershell
+  oh-my-posh font install meslo
+  oh-my-posh font install FiraCode
+  ```
+
+#### Media (video/image)
+
 * [clsid2.mpc-hc](https://github.com/clsid2/mpc-hc/) - Excellent video player of all media.
   * [VideoLAN.VLC](https://www.videolan.org/) This is great alternative to MPC-HC (clsid2 fork)
-* [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
-* [Espanso.Espanso](https://espanso.org/) Open Source text expander
-
+* [nomacs.nomacs](https://nomacs.org/) - Open Source Image Viewer
+* [dotPDN.PaintDotNet](https://getpaint.net/) - Great free image and photo editing software
 
 #### Browsers
 
@@ -107,38 +129,12 @@ Install it last, after all other software and then [enable ligatures](https://gi
 #### Tools
 
 * [Flameshot.Flameshot](https://flameshot.org/) - Open Source Screeshot software
-* [nomacs.nomacs](https://nomacs.org/) - Open Source Image Viewer
-* [dotPDN.PaintDotNet](https://getpaint.net/) - Great free image and photo editing software
 * [JernejSimoncic.Wget](https://eternallybored.org/misc/wget/) - GNU Wget
-
-#### PDF Tools
-
 * [PDFsam.PDFsam](https://pdfsam.org/) - _PDFsam Basic_: split, merge, extract pages, rotate and mix PDF files
 
-### Additional CORE applications
-
-* [BurntSushi.ripgrep.MSVC](https://github.com/BurntSushi/ripgrep) - **rg** - line-oriented search tool that recursively searches the current directory for a regex pattern.
-* [gerardog.gsudo](https://github.com/gerardog/gsudo) - **sudo** for Windows
-* [ajeetdsouza.zoxide](https://github.com/ajeetdsouza/zoxide) - **zoxide** is a smarter cd command, inspired by z and autojump. Installation details [here](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation); add this to your PowerShell profile:
-  ```powershell
-  Invoke-Expression (& { (zoxide init powershell | Out-String) })
-  ```
-* [JanDeDobbeleer.OhMyPosh](https://github.com/JanDeDobbeleer/oh-my-posh) - The **most** configurable prompt utility for any shell.
-  * Install fonts directly using Oh My Posh:
-  ```powershell
-  oh-my-posh font install meslo
-  oh-my-posh font install FiraCode
-  ```
-* [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
-
-
-#### System Informer
+##### System Informer
 
 [WinsiderSS.SystemInformer](https://github.com/winsiderss/systeminformer) - A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.
-
-#### Misc Tools
-
-[Logitech.UnifyingSoftware](https://support.logi.com/hc/en-my/articles/360025297913-Unifying-Software) - for lucky users of Logitech mouse
 
 ## Home Applications
 
@@ -214,4 +210,5 @@ winget install -e --id Garmin.GarminExpress
 winget install -e --id LIGHTNINGUK.ImgBurn
 
 winget install -e --id Dell.CommandUpdate.Universal
+winget install -e --id Logitech.UnifyingSoftware
 ```
