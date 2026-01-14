@@ -99,11 +99,9 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 #### Browsers
 
-* [Google.Chrome](https://www.google.com/chrome/)
-  * Google Keep as separate application: `"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --profile-directory=Default --no-proxy-server --app=https://keep.google.com`
 * [Opera.Opera](https://www.opera.com/)
   * Launching Opera w/o proxy: `C:\Users\dvesic\AppData\Local\Programs\Opera\launcher.exe --no-proxy-server="`
-* [Mozilla.Firefox](https://www.mozilla.org/en-US/firefox/new/)
+* [Mozilla.Firefox.DeveloperEdition](https://www.firefox.com/en-US/channel/desktop/developer/) FireFox Developer Edition, as complement to Chromium based browsers.
 
 #### Tools
 
@@ -115,7 +113,6 @@ Install it last, after all other software and then [enable ligatures](https://gi
 #### PDF Tools
 
 * [PDFsam.PDFsam](https://pdfsam.org/) - _PDFsam Basic_: split, merge, extract pages, rotate and mix PDF files
-* [AngusJohnson.PDFTKBuilder](http://angusj.com/pdftkb/) - free graphical interface to [PDFTK](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
 
 ### Optional CORE applications
 
@@ -164,12 +161,10 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 
 * (OneDrive comes with Windows)
 * [Google.GoogleDrive](https://workspace.google.com/products/drive/)
-* [Dropbox.Dropbox](https://www.dropbox.com/)
 
 #### Various Tools
 
 * [SumatraPDF.SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) - brilliant application for PDF, eBook (epub, mobi), comic book (cbz/cbr), DjVu, XPS, CHM and image viewer for Windows.
-* [Adobe.Acrobat.Reader.64-bit](https://get.adobe.com/reader/)
 * [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
 * [AutoHotkey.AutoHotkey](https://www.autohotkey.com) Great automation tool
 

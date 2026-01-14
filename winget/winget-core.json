@@ -67,10 +67,7 @@
 					"PackageIdentifier" : "Opera.Opera"
 				},
 				{
-					"PackageIdentifier" : "Google.Chrome"
-				},
-				{
-					"PackageIdentifier" : "Mozilla.Firefox"
+					"PackageIdentifier" : "Mozilla.Firefox.DeveloperEdition"
 				},
 				{
 					"PackageIdentifier" : "clsid2.mpc-hc"
@@ -80,9 +77,6 @@
 				},
 				{
 					"PackageIdentifier" : "PDFsam.PDFsam"
-				},
-				{
-					"PackageIdentifier" : "AngusJohnson.PDFTKBuilder"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
