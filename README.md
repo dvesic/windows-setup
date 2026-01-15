@@ -210,6 +210,8 @@ winget install -e --id LIGHTNINGUK.ImgBurn
 
 winget install -e --id Dell.CommandUpdate.Universal
 winget install -e --id Logitech.UnifyingSoftware
+
+winget install -e --id Gyan.FFmpeg
 ```
 
-> Last updated: 2026-01-14
+> Last updated: 2026-01-15  
