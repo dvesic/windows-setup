@@ -130,7 +130,7 @@ For both tools, **oh-my-posh** and **zoxide** I recommend to keep PowerShell pro
 
 #### Tools
 
-* [Flameshot.Flameshot](https://flameshot.org/) - Open Source Screenshot software
+* [ShareX.ShareX](https://getsharex.com/) - ShareX - Excellent open source screenshot software
 * [JernejSimoncic.Wget](https://eternallybored.org/misc/wget/) - GNU Wget
 * [PDFsam.PDFsam](https://pdfsam.org/) - _PDFsam Basic_: split, merge, extract pages, rotate and mix PDF files
 * [WinsiderSS.SystemInformer](https://github.com/winsiderss/systeminformer) - A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.
@@ -214,4 +214,4 @@ winget install -e --id Logitech.UnifyingSoftware
 winget install -e --id Gyan.FFmpeg
 ```
 
-> Last updated: 2026-01-15  
+> Last updated: 2026-01-17  
