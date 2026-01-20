@@ -91,6 +91,7 @@ Install it last, after all other software and then [enable ligatures](https://gi
 [SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
 * [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
+* [chmln.sd](https://github.com/chmln/sd) Efficient search & replace CLI tool.
 
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
 * [Ghisler.TotalCommander](https://www.ghisler.com/). Settings for shortcut, to use cloud based ini files:
@@ -174,6 +175,13 @@ Finally, if you are into python development, I do wholeheartly suggest to look i
 #### Various Tools
 
 * [SumatraPDF.SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) - brilliant application for PDF, eBook (epub, mobi), comic book (cbz/cbr), DjVu, XPS, CHM and image viewer for Windows.
+
+```powershell
+    # Initial setup: ESC for exit and do not remember open files between sessions
+    sd 'EscToExit = false' 'EscToExit = true' $Env:LOCALAPPDATA\SumatraPDF\SumatraPDF-settings.txt
+    sd 'RememberOpenedFiles = true' 'RememberOpenedFiles = false' $Env:LOCALAPPDATA\SumatraPDF\SumatraPDF-settings.txt
+```
+
 * [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
 * [Joplin.Joplin](https://joplinapp.org/) Open source, Markdown note taking application. Excellent sync options between multiple machines.
 
@@ -214,4 +222,4 @@ winget install -e --id Logitech.UnifyingSoftware
 winget install -e --id Gyan.FFmpeg
 ```
 
-> Last updated: 2026-01-17  
+> Last updated: 2026-01-20
