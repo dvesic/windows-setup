@@ -220,6 +220,8 @@ winget install -e --id Dell.CommandUpdate.Universal
 winget install -e --id Logitech.UnifyingSoftware
 
 winget install -e --id Gyan.FFmpeg
+
+winget install -e --id yt-dlp.yt-dlp
 ```
 
 > Last updated: 2026-01-20
