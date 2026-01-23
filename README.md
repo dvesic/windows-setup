@@ -165,8 +165,6 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
   * Use `/ini` to point out to cloud settings file: `winscp.exe /ini="G:\My Drive\Utils\WinSCP\WinSCP.ini"`
 * [Microsoft.WSL](https://learn.microsoft.com/en-us/windows/wsl/install) MS Windows Subsystem for Linux
 
-Finally, if you are into python development, I do wholeheartly suggest to look into this repository - [Perfect python 4 Windows](https://github.com/dvesic/perfect-python-4-windows) as well as [Python Skeleton](https://github.com/dvesic/python-skeleton) - both based on significant experience.
-
 #### Cloud
 
 * (OneDrive comes with Windows)
