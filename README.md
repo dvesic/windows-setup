@@ -22,11 +22,12 @@ Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery -Scope
 Repair-WinGetPackageManager
 ```
 
-> [!NOTE]  
-> Last command often fails for first time, so expect to repeat it.
+<details>
+<summary>Notes about <i>Sandbox</i></summary>
+* Last command often fails for first time, so expect to repeat it.
+* For some strange reason, if your Sandbox have "Region" (System / Time & language / Language & region ) set to **World** some installations (Windows Terminal, for example) _will fail_. Just set proper Region before running first WinGet installation.
+</details>
 
-> [!NOTE]
-> For some strange reason, if your Sandbox have "Region" (System / Time & language / Language & region ) set to **World** some installations (Windows Terminal, for example) _will fail_. Just set proper Region before running first WinGet installation.
 
 Having that, I split installation into three phases:
 
