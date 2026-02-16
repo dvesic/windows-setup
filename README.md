@@ -207,6 +207,9 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 ### Optional HOME applications
 
 ```bat
+# Full 365 Office suite
+winget install -e --id Microsoft.Office
+
 winget install -e --id AnyDeskSoftwareGmbH.AnyDesk
 
 winget install -e --id Microsoft.Sysinternals.RDCMan

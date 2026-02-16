@@ -7,9 +7,6 @@
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "Microsoft.Office"
-				},
-				{
 					"PackageIdentifier" : "Git.Git"
 				},				
 				{
