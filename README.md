@@ -90,8 +90,9 @@ Install it last, after all other software and then [enable ligatures](https://gi
 * [Microsoft.WindowsTerminal](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
 * [Microsoft.PowerShell](https://learn.microsoft.com/en-us/powershell/)
 * [Microsoft.PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
-* ~~Microsoft.OpenSSH.Beta~~ Not needed anymore. Windows 11 has built in SSH. Here is PowerShell script to check / enable (elevation needed):
-[SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
+* ~~Microsoft.OpenSSH.Beta~~ Not needed anymore. Windows 11 has built in SSH. Here is PowerShell script to check / enable (elevation needed): [SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
+  * You can use OpenSSL for key generation: `ssh-keygen.exe -t ecdsa -b 521 -f key.private`
+  * Keys should be stored in `"%USERPROFILE%\.ssh"`
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
 * [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
   * in Ubuntu, you could install it with: `sudo snap install msedit`
@@ -158,9 +159,6 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
   * `git config --global user.name "dvesic"`
   * `git config --global user.email "Dejan@Vesic.Org"`
   * Check for update: `git update-git-for-windows`
-  * Apart from using git, you can use OpenSSL within installation for key generation:
-    * `"%ProgramW6432%\Git\usr\bin\ssh-keygen.exe" -t ecdsa -b 521 -f key.private`
-    * Keys should be stored in `"%USERPROFILE%\.ssh"`
 * [GitHub.cli](https://cli.github.com/)
 * [dbeaver.dbeaver](https://dbeaver.io/) - Universal database tool
 * [WinMerge.WinMerge](https://winmerge.org/?lang=en) -  Open Source differencing and merging tool for Windows
