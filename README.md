@@ -24,6 +24,7 @@ Repair-WinGetPackageManager
 
 > [!NOTE]  
 > Last command often fails for first time, so expect to repeat it.
+> For some strange reason, if your Sandbox have "Region" (System / Time & language / Language & region ) set to **World** some installations (Windows Terminal, for example) _will fail_. Just set proper Region before running first WinGet installation.
 
 Having that, I split installation into three phases:
 
@@ -221,5 +222,19 @@ winget install -e --id Gyan.FFmpeg
 
 winget install -e --id yt-dlp.yt-dlp
 ```
+### Changing WSL shell to zsh
 
-> Last updated: 2026-01-20
+Given that WSL is native accompanuing environment for development, it deserves probably same set of instrutions / applications as for Windows above.
+
+For start, I am just leaving script which installs [zsh](https://en.wikipedia.org/wiki/Z_shell)  instead of default bash shell:
+
+1. Copy `setup_zsh.sh` to WSL environment
+2. Make it executable: `chmod +x setup_zsh.sh`
+3. Run it: `./setup_zsh.sh`
+
+Finally, adjust/check if your Windows Terminal profile for Ubuntu:
+* Uses `FiraCode Nerd Font Mono` as font for profile
+* Make sure that `Additional setting / Apearance / Builtin Glyphs` is **turned on**
+
+
+> Last updated: 2026-02-16
