@@ -152,10 +152,6 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 
 ### List of applications
 
-#### Home Office
-
-* [Microsoft.Office](https://www.microsoft.com/EN-US/microsoft-365/buy/compare-all-microsoft-365-products?icid=MSCOM_QL_M365) Microsoft 365 Family
-
 #### Development / Python
 
 * [Git.Git](https://git-scm.com/)
