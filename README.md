@@ -99,6 +99,7 @@ Install it last, after all other software and then [enable ligatures](https://gi
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
 * [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
   * in Ubuntu, you could install it with: `sudo snap install msedit`
+* [Joplin.Joplin](https://joplinapp.org/) Open source, Markdown note taking application. Excellent sync options between multiple machines.
 * [chmln.sd](https://github.com/chmln/sd) Efficient search & replace CLI tool.
 
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
@@ -182,7 +183,6 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 ```
 
 * [voidtools.Everything](https://www.voidtools.com/) - Locate files and folders by name instantly
-* [Joplin.Joplin](https://joplinapp.org/) Open source, Markdown note taking application. Excellent sync options between multiple machines.
 
 #### Communication
 
