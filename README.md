@@ -84,7 +84,7 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 #### Essentials
 
-* [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) - sooner or later (usually sooner), one of applications will require this.
+* [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) - sooner or later (usually sooner), one of applications will require this. Note - this takes quite time to get installed.
 * [Microsoft.WindowsTerminal](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
 * [Microsoft.PowerShell](https://learn.microsoft.com/en-us/powershell/)
 * [Microsoft.PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
@@ -92,6 +92,7 @@ Install it last, after all other software and then [enable ligatures](https://gi
 [SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
 * [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
+  * in Ubuntu, you could install it with: `sudo snap install msedit`
 * [chmln.sd](https://github.com/chmln/sd) Efficient search & replace CLI tool.
 
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
