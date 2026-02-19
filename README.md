@@ -224,6 +224,10 @@ winget install -e --id Logitech.UnifyingSoftware
 winget install -e --id Gyan.FFmpeg
 
 winget install -e --id yt-dlp.yt-dlp
+
+# Essencial for multi-os / OneDrive synced projects
+winget install -e --id direnv.direnv
+
 ```
 ### Changing WSL shell to zsh
 
@@ -240,4 +244,4 @@ Finally, adjust/check if your Windows Terminal profile for Ubuntu:
 * Make sure that `Additional setting / Apearance / Builtin Glyphs` is **turned on**
 
 
-> Last updated: 2026-02-16
+> Last updated: 2026-02-19
