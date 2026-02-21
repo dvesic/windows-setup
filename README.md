@@ -21,6 +21,10 @@ Install-PackageProvider -Name NuGet -Force
 Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery -Scope AllUsers
 Repair-WinGetPackageManager
 ```
+
+<details>
+<summary>Notes about <i>Microsoft.PowerShell.Management\Test-Connection : Access is denied.</i></summary>
+
 In case above fails with ```Microsoft.PowerShell.Management\Test-Connection : Access is denied.``` try to repair with this:
 
 ```powershell
@@ -30,6 +34,7 @@ Restart-Service Winmgmt
 
 and try again.
 
+</details>
 
 <details>
 <summary>Notes about <i>Sandbox</i></summary>
@@ -38,7 +43,6 @@ and try again.
 * For some strange reason, if your Sandbox have "Region" (System / Time & language / Language & region ) set to **World** some installations (Windows Terminal, for example) _will fail_. Just set proper Region before running first WinGet installation.
 
 </details>
-
 
 Having that, I split installation into three phases:
 
