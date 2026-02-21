@@ -52,6 +52,7 @@ Having that, I split installation into three phases:
 * Cloud storage; any will do, but I prefer those which are mirrored on file system (Google Drive, OneDrive) - easier to work with
 * YU Keyboard from [vesic.org](https://www.vesic.org/programi/nasa-slova-na-us-tastaturi-resenje-2005-e/)
   * This is "local" solution for typing accent characters (ćčšđžĆČŠĐŽ) for Balkan nations (Serbian, Bosnian, Croatian, Slovenian...) on non-YU keyboards.
+  * To be fair to others, won't put it in CORE / HOME packages, but leave in optional section :-)
 
 ## MS Store
 
@@ -212,6 +213,9 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 ### Optional HOME applications
 
 ```bat
+# YU-US keyboard by Vesic.Org
+winget install -e --id Vesic.Org.US-YU.keyboard --source winget
+
 # Full 365 Office suite
 winget install -e --id Microsoft.Office
 
