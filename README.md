@@ -21,6 +21,15 @@ Install-PackageProvider -Name NuGet -Force
 Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery -Scope AllUsers
 Repair-WinGetPackageManager
 ```
+In case above fails with ```Microsoft.PowerShell.Management\Test-Connection : Access is denied.``` try to repair with this:
+
+```powershell
+winmgmt /resetrepository
+Restart-Service Winmgmt
+```
+
+and try again.
+
 
 <details>
 <summary>Notes about <i>Sandbox</i></summary>
