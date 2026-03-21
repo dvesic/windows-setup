@@ -2,11 +2,9 @@
 
 ## All files and instructions needed to setup Home/Work machine under Windows 11
 
-This is not usual "setup" guide; this is more quick and efficient guide (and mostly reminder to myself :grinning:)
-how to setup blank machine with least amount of effort.
+This is not usual "setup" guide; this is more quick and efficient guide (and mostly reminder to myself :grinning:) how to setup blank machine with least amount of effort.
 
-Also, this targets minimum applications (core) + specific ones for home usage/development (home). Given that this is higly dependent
-on what you actually use PC for, it is not universal list :smile:
+Also, this targets minimum applications (core) + specific ones for home usage/development (home). Given that this is higly dependent on what you actually use PC for, it is not universal list :smile:
 
 I believe that general principles (MS Store, WinGet + Cloud storage) can be applied to everyone:
 
@@ -14,7 +12,7 @@ I believe that general principles (MS Store, WinGet + Cloud storage) can be appl
 * Make installation breeze, using automation (MS Store / WinGet) and minimalist approach what is actually needed
 * Use existing mechanisms (VS Code Settings Sync, PyCharm Settings Sync, cloud for file based settings) to sync various details between workplaces
 * Finally, I suggest that for testing and fine tuning you use [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/), excellent low profile Win instance. You can install _winget_ in Sandbox via Windows PowerShell, details [here](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget-on-windows-sandbox). 
-Do not forget to add `-Scope AllUsers` given that bunch of applications are system ones. Here is that script, but "verbose" version:
+  Do not forget to add `-Scope AllUsers` given that bunch of applications are system ones. Here is that script, but "verbose" version:
 
 ```powershell
 Install-PackageProvider -Name NuGet -Force
@@ -62,20 +60,18 @@ Having that, I split installation into three phases:
 
 Why MS Store? One time install, tied to MS Account, easy to install on other machine, auto-update...Also, some of applications simply can't be installed over _winget_, at least for now.
 
-UPDATE: got couple of comments that this installation is "Store heavy", offering less flexibility than "pure" _winget_ installation. Having that in mind,
-this version of installation is moved toward that goal - only actual _winget_ and _Windows Notepad_ should be installed over MS store - everything else can be done over
-_winget_ itself:
+UPDATE: got couple of comments that this installation is "Store heavy", offering less flexibility than "pure" _winget_ installation. Having that in mind, this version of installation is moved toward that goal - only actual _winget_ and _Windows Notepad_ should be installed over MS store - everything else can be done over _winget_ itself:
 
 * [App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)
 * [Windows Notepad](https://www.microsoft.com/store/productId/9MSMLRH6LZF3)
 * [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701) - actual installation is over _winget_. Here are just details how can you keep your configuration on cloud storage.
   * Currently, there is no option to change Setting folder of Windows Terminal. In order to correct that (and store it on cloud storage), here is Powershell script:
-  [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings (run _elevated_):
-  
+    [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings (run _elevated_):
+
 ```powershell
 Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "$env:OneDriveConsumer\Utils\WindowsTerminal\LocalState"
-  ```
+```
 
 Once WinGet is installed, you are ready to install Core applications:
 
@@ -104,25 +100,40 @@ Install it last, after all other software and then [enable ligatures](https://gi
 #### Essentials
 
 * [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) - sooner or later (usually sooner), one of applications will require this. Note - this takes quite time to get installed.
+
 * [Microsoft.WindowsTerminal](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+
 * [Microsoft.PowerShell](https://learn.microsoft.com/en-us/powershell/)
+
 * [Microsoft.PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
+
 * ~~Microsoft.OpenSSH.Beta~~ Not needed anymore. Windows 11 has built in SSH. Here is PowerShell script to check / enable (elevation needed): [SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
+  
   * You can use OpenSSL for key generation: `ssh-keygen.exe -t ecdsa -b 521 -f key.private`
   * Keys should be stored in `"%USERPROFILE%\.ssh"`
+
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
+
 * [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
+  
   * in Ubuntu, you could install it with: `sudo snap install msedit`
+
 * [Joplin.Joplin](https://joplinapp.org/) Open source, Markdown note taking application. Excellent sync options between multiple machines.
+
 * [chmln.sd](https://github.com/chmln/sd) Efficient search & replace CLI tool.
 
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
+
 * [Ghisler.TotalCommander](https://www.ghisler.com/). Settings for shortcut, to use cloud based ini files:
+  
   * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
 
 * [Espanso.Espanso](https://espanso.org/) Open Source text expander
+
 * [BurntSushi.ripgrep.MSVC](https://github.com/BurntSushi/ripgrep) - **rg** - line-oriented search tool that recursively searches the current directory for a regex pattern.
+
 * [gerardog.gsudo](https://github.com/gerardog/gsudo) - **sudo** for Windows
+
 * [ajeetdsouza.zoxide](https://github.com/ajeetdsouza/zoxide) - **zoxide** is a smarter cd command, inspired by z and autojump. Installation details [here](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation); add this to your PowerShell profile:
   
   ```powershell
@@ -130,14 +141,15 @@ Install it last, after all other software and then [enable ligatures](https://gi
   ```
 
 * [JanDeDobbeleer.OhMyPosh](https://github.com/JanDeDobbeleer/oh-my-posh) - The **most** configurable prompt utility for any shell.
+  
   * Install fonts directly using Oh My Posh:
-
+  
   ```powershell
   oh-my-posh font install meslo
   oh-my-posh font install FiraCode
   ```
-For both tools, **oh-my-posh** and **zoxide** I recommend to keep PowerShell profile on cloud drive and use it to SymLink local profile to it. Script for that is [PowerShellProfileSym.ps1](./PowerShellProfileSym.ps1) and minimal PowerShell profile is here: [Microsoft.PowerShell_profile.ps1](./Microsoft.PowerShell_profile.ps1)
-
+  
+  For both tools, **oh-my-posh** and **zoxide** I recommend to keep PowerShell profile on cloud drive and use it to SymLink local profile to it. Script for that is [PowerShellProfileSym.ps1](./PowerShellProfileSym.ps1) and minimal PowerShell profile is here: [Microsoft.PowerShell_profile.ps1](./Microsoft.PowerShell_profile.ps1)
 
 #### Media (video/image)
 
@@ -218,6 +230,9 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 
 ```bat
 # YU-US keyboard by Vesic.Org
+# More details here:
+# https://www.vesic.org/blog/mikrosoft/windows/instalacija-us-yu-tastature-preko-winget/
+
 winget install -e --id Vesic.Org.US-YU.keyboard --source winget
 
 # Full 365 Office suite
@@ -242,10 +257,10 @@ winget install -e --id Gyan.FFmpeg
 
 winget install -e --id yt-dlp.yt-dlp
 
-# Essencial for multi-os / OneDrive synced projects
-winget install -e --id direnv.direnv
-
+# Open source MarkDown editor
+winget install -e --id MarkText.MarkText
 ```
+
 ### Changing WSL shell to zsh
 
 Given that WSL is native accompanuing environment for development, it deserves probably same set of instrutions / applications as for Windows above.
@@ -257,8 +272,8 @@ For start, I am just leaving script which installs [zsh](https://en.wikipedia.or
 3. Run it: `./setup_zsh.sh`
 
 Finally, adjust/check if your Windows Terminal profile for Ubuntu:
+
 * Uses `FiraCode Nerd Font Mono` as font for profile
 * Make sure that `Additional setting / Apearance / Builtin Glyphs` is **turned on**
 
-
-> Last updated: 2026-02-19
+> Last updated: 2026-03-21
