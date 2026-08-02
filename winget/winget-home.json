@@ -19,6 +19,9 @@
 					"PackageIdentifier" : "WinMerge.WinMerge"
 				},
 				{
+					"PackageIdentifier" : "MarkText.MarkText"
+				},				
+				{
 					"PackageIdentifier" : "JetBrains.PyCharm.Professional"
 				},
 				{
@@ -31,7 +34,7 @@
 					"PackageIdentifier" : "SumatraPDF.SumatraPDF"
 				},
 				{
-					"PackageIdentifier" : "voidtools.Everything"
+					"PackageIdentifier" : "voidtools.Everything.Lite"
 				},
 				{
 					"PackageIdentifier" : "Rakuten.Viber"
