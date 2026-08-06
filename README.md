@@ -130,6 +130,8 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 * [Espanso.Espanso](https://espanso.org/) Open Source text expander
 
+  * `MKLINK /D C:\Users\dvesic\AppData\Roaming\espanso c:\Users\dvesic\OneDrive\Utils\espanso`
+
 * [BurntSushi.ripgrep.MSVC](https://github.com/BurntSushi/ripgrep) - **rg** - line-oriented search tool that recursively searches the current directory for a regex pattern.
 
 * [gerardog.gsudo](https://github.com/gerardog/gsudo) - **sudo** for Windows
