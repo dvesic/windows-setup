@@ -62,9 +62,11 @@ Why MS Store? One time install, tied to MS Account, easy to install on other mac
 
 UPDATE: got couple of comments that this installation is "Store heavy", offering less flexibility than "pure" _winget_ installation. Having that in mind, this version of installation is moved toward that goal - only actual _winget_ and _Windows Notepad_ should be installed over MS store - everything else can be done over _winget_ itself:
 
-* [App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)
 * [Windows Notepad](https://www.microsoft.com/store/productId/9MSMLRH6LZF3)
-* [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701) - actual installation is over _winget_. Here are just details how can you keep your configuration on cloud storage.
+
+Not needed anymore - comes with Windows 11 installation:
+* ~~[App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)~~ 
+* ~~[Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701) - actual installation is over _winget_. Here are just details how can you keep your configuration on cloud storage.~~
   * Currently, there is no option to change Setting folder of Windows Terminal. In order to correct that (and store it on cloud storage), here is Powershell script:
     [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings (run _elevated_):
 
@@ -114,7 +116,7 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
 
-* [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times
+* ~~[Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times~~ Part of Windows 11 installation, no need for separate install
   
   * in Ubuntu, you could install it with: `sudo snap install msedit`
 
@@ -168,8 +170,8 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 #### Tools
 
-* [ShareX.ShareX](https://getsharex.com/) - ShareX - Excellent open source screenshot software
-* [JernejSimoncic.Wget](https://eternallybored.org/misc/wget/) - GNU Wget
+* ~~[ShareX.ShareX](https://getsharex.com/) - ShareX - Excellent open source screenshot software~~ Integrated Windows 11 Snipping tools is suficient for basic needs.
+* ~~[JernejSimoncic.Wget](https://eternallybored.org/misc/wget/) - GNU Wget~~ Removed in favor of native curl.exe
 * [PDFsam.PDFsam](https://pdfsam.org/) - _PDFsam Basic_: split, merge, extract pages, rotate and mix PDF files
 * [WinsiderSS.SystemInformer](https://github.com/winsiderss/systeminformer) - A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.
 
@@ -187,6 +189,7 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
   * `git config --global user.name "dvesic"`
   * `git config --global user.email "Dejan@Vesic.Org"`
   * `git config --global credential.helper store`
+  * (credentials are stored in the ~/.git-credentials file; you can edit this file to remove or update your stored credentials.)
   * Check for update: `git update-git-for-windows`
 * [GitHub.cli](https://cli.github.com/)
 * [dbeaver.dbeaver](https://dbeaver.io/) - Universal database tool
