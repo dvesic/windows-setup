@@ -186,6 +186,7 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
 * [Git.Git](https://git-scm.com/)
   * `git config --global user.name "dvesic"`
   * `git config --global user.email "Dejan@Vesic.Org"`
+  * `git config --global credential.helper store`
   * Check for update: `git update-git-for-windows`
 * [GitHub.cli](https://cli.github.com/)
 * [dbeaver.dbeaver](https://dbeaver.io/) - Universal database tool
