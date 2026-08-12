@@ -191,6 +191,7 @@ winget import -i .\winget\winget-home.json --accept-package-agreements
   * `git config --global credential.helper store`
   * (credentials are stored in the ~/.git-credentials file; you can edit this file to remove or update your stored credentials.)
   * Check for update: `git update-git-for-windows`
+  * For WSL: `git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"`
 * [GitHub.cli](https://cli.github.com/)
 * [dbeaver.dbeaver](https://dbeaver.io/) - Universal database tool
 * [WinMerge.WinMerge](https://winmerge.org/?lang=en) -  Open Source differencing and merging tool for Windows
