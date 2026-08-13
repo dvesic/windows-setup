@@ -131,7 +131,7 @@ Install it last, after all other software and then [enable ligatures](https://gi
   * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
   
   * Open source alternative: [alexx2000.DoubleCommander](https://doublecmd.sourceforge.io/)
-    * * `doublecmd.exe --config-dir="%OneDriveConsumer%\Utils\DoubleCommander"`
+    * `doublecmd.exe --config-dir=%OneDriveConsumer%\Utils\DoubleCommander`
     
 * [Espanso.Espanso](https://espanso.org/) Open Source text expander
 
