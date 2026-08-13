@@ -52,6 +52,7 @@ Having that, I split installation into three phases:
 
 * [Windows 11](https://www.microsoft.com/software-download/windows11), fully patched (Windows 10 will do, but I do not see point of using EOL operating system)
 * Cloud storage; any will do, but I prefer those which are mirrored on file system (Google Drive, OneDrive) - easier to work with
+* App Installer (WinGet) - now, part of Windows 11 installation
 * YU Keyboard from [vesic.org](https://www.vesic.org/programi/nasa-slova-na-us-tastaturi-resenje-2005-e/)
   * This is "local" solution for typing accent characters (ćčšđžĆČŠĐŽ) for Balkan nations (Serbian, Bosnian, Croatian, Slovenian...) on non-YU keyboards.
   * To be fair to others, won't put it in CORE / HOME packages, but leave in optional section :-)
@@ -63,17 +64,6 @@ Why MS Store? One time install, tied to MS Account, easy to install on other mac
 UPDATE: got couple of comments that this installation is "Store heavy", offering less flexibility than "pure" _winget_ installation. Having that in mind, this version of installation is moved toward that goal - only actual _winget_ and _Windows Notepad_ should be installed over MS store - everything else can be done over _winget_ itself:
 
 * [Windows Notepad](https://www.microsoft.com/store/productId/9MSMLRH6LZF3)
-
-Not needed anymore - comes with Windows 11 installation:
-* ~~[App Installer (WinGet)](https://www.microsoft.com/store/productId/9NBLGGH4NNS1)~~ 
-* ~~[Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701) - actual installation is over _winget_. Here are just details how can you keep your configuration on cloud storage.~~
-  * Currently, there is no option to change Setting folder of Windows Terminal. In order to correct that (and store it on cloud storage), here is Powershell script:
-    [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings (run _elevated_):
-
-```powershell
-Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
-New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "$env:OneDriveConsumer\Utils\WindowsTerminal\LocalState"
-```
 
 Once WinGet is installed, you are ready to install Core applications:
 
@@ -93,7 +83,7 @@ winget import -i .\winget\winget-core.json --accept-package-agreements
 
 ## FiraCode font
 
-My work relies on CMD/Windows terminal prompt; one great resource for that is [FiraCode](https://github.com/tonsky/FiraCode) font, monospaced font for development.
+My work relies on CMD/Windows terminal prompt; one great resource for that is [FiraCode](https://github.com/tonsky/FiraCode) font, monospaced font for development, or more recently [Fira Code Nerd Mono](https://www.nerdfonts.com/font-downloads) (choose to your liking).
 
 Install it last, after all other software and then [enable ligatures](https://github.com/tonsky/FiraCode/wiki#enabling-ligatures) for Windows Terminal, VS Code and PyCharm. If you use **Oh My Posh**, instructions for installation are below.
 
@@ -109,16 +99,7 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 * [Microsoft.PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
 
-* ~~Microsoft.OpenSSH.Beta~~ Not needed anymore. Windows 11 has built in SSH. Here is PowerShell script to check / enable (elevation needed): [SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
-  
-  * You can use OpenSSL for key generation: `ssh-keygen.exe -t ecdsa -b 521 -f key.private`
-  * Keys should be stored in `"%USERPROFILE%\.ssh"`
-
 * [Microsoft.VisualStudioCode](https://code.visualstudio.com/) Visual Studio Code
-
-* ~~[Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times~~ Part of Windows 11 installation, no need for separate install
-  
-  * in Ubuntu, you could install it with: `sudo snap install msedit`
 
 * [Joplin.Joplin](https://joplinapp.org/) Open source, Markdown note taking application. Excellent sync options between multiple machines.
 
@@ -126,15 +107,10 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 * [7zip.7zip](https://www.7-zip.org/) - Excellent archiver
 
-* [Ghisler.TotalCommander](https://www.ghisler.com/). Settings for shortcut, to use cloud based ini files:
-  
-  * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
-  
-  * Open source alternative: [alexx2000.DoubleCommander](https://doublecmd.sourceforge.io/)
-    * `doublecmd.exe --config-dir=%OneDriveConsumer%\Utils\DoubleCommander`
-    
-* [Espanso.Espanso](https://espanso.org/) Open Source text expander
+* Open source file manager: [alexx2000.DoubleCommander](https://doublecmd.sourceforge.io/) (direct replacement for Total Commander)
+  * `doublecmd.exe --config-dir=%OneDriveConsumer%\Utils\DoubleCommander`
 
+* [Espanso.Espanso](https://espanso.org/) Open Source text expander
   * `MKLINK /D C:\Users\dvesic\AppData\Roaming\espanso c:\Users\dvesic\OneDrive\Utils\espanso`
 
 * [BurntSushi.ripgrep.MSVC](https://github.com/BurntSushi/ripgrep) - **rg** - line-oriented search tool that recursively searches the current directory for a regex pattern.
@@ -173,8 +149,6 @@ Install it last, after all other software and then [enable ligatures](https://gi
 
 #### Tools
 
-* ~~[ShareX.ShareX](https://getsharex.com/) - ShareX - Excellent open source screenshot software~~ Integrated Windows 11 Snipping tools is suficient for basic needs.
-* ~~[JernejSimoncic.Wget](https://eternallybored.org/misc/wget/) - GNU Wget~~ Removed in favor of native curl.exe
 * [PDFsam.PDFsam](https://pdfsam.org/) - _PDFsam Basic_: split, merge, extract pages, rotate and mix PDF files
 * [WinsiderSS.SystemInformer](https://github.com/winsiderss/systeminformer) - A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.
 
@@ -286,4 +260,31 @@ Finally, adjust/check if your Windows Terminal profile for Ubuntu:
 * Uses `FiraCode Nerd Font Mono` as font for profile
 * Make sure that `Additional setting / Apearance / Builtin Glyphs` is **turned on**
 
-> Last updated: 2026-03-21
+## Archive
+
+Section for sofware which is either made obsolete (with native applications of Windows 11) or replaced with alternative. Also, any configuration details which are important
+post-installation.
+
+* [Microsoft.WindowsTerminal](https://github.com/microsoft/terminal) - Here are details how can you keep your configuration on cloud storage.
+  * Currently, there is no option to change Setting folder of Windows Terminal. In order to correct that (and store it on cloud storage), here is Powershell script:
+    [WinTermSetSym.ps1](./WinTermSetSym.ps1) for removing "original" and re-mapping to cloud folder with settings (run _elevated_):
+
+```powershell
+Remove-Item -Force -Recurse -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
+New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "$env:OneDriveConsumer\Utils\WindowsTerminal\LocalState"
+```
+
+* Microsoft.OpenSSH.Beta Not needed anymore. Windows 11 has built in SSH. Here is PowerShell script to check / enable (elevation needed): [SSHCheckAndInstall.ps1](./SSHCheckAndInstall.ps1)
+  * You can use OpenSSL for key generation: `ssh-keygen.exe -t ecdsa -b 521 -f key.private`
+  * Keys should be stored in `"%USERPROFILE%\.ssh"`
+
+* [Microsoft.Edit](https://github.com/microsoft/edit) - Nostalgia :-) Very simple editor from MS-DOS times. Part of Windows 11 installation, no need for separate install
+  * in Ubuntu, you could install it with: `sudo snap install msedit`
+
+* [Ghisler.TotalCommander](https://www.ghisler.com/). Settings for shortcut, to use cloud based ini files:
+  * `TOTALCMD64.EXE /i="G:\My Drive\Utils\totalcmd\wincmd.ini" /F="G:\My Drive\Utils\totalcmd\wcx_ftp.ini"`
+
+* [ShareX.ShareX](https://getsharex.com/) - ShareX - Excellent open source screenshot software. Integrated Windows 11 Snipping tools is suficient for basic needs.
+* [JernejSimoncic.Wget](https://eternallybored.org/misc/wget/) - GNU Wget - removed in favor of native curl.exe
+
+> Last updated: 2026-08-13
